@@ -2,4 +2,6 @@
 /node_modules/
 /public/
 /resources/
+.obsidian/
+.obsidian.vimrc
 .hugo_build.lock

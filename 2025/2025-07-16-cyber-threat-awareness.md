@@ -8,7 +8,7 @@ categories:
 tags:
   - threats
 series:
-  - Intro-cyber-security
+  - intro-cyber-security
 ---
 # Foundations of Threat Awareness
 

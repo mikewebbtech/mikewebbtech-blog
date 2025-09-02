@@ -9,7 +9,7 @@ tags:
   - risk
   - managment
 series:
-  - Intro-cyber-security
+  - intro-cyber-security
 ---
 # Introduction to Risk
 

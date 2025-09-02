@@ -9,7 +9,7 @@ tags:
   - risk
   - controls
 series:
-  - Intro-cyber-security
+  - intro-cyber-security
 ---
  
  # Risk Mitigation Plans

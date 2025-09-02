@@ -10,7 +10,7 @@ tags:
   - threats
   - assets
 series:
-  - Intro-cyber-security
+  - intro-cyber-security
 ---
 
 # ICT Assets and Asset Registers

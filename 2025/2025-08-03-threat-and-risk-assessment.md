@@ -9,7 +9,7 @@ tags:
   - risk
   - threat
 series:
-  - Intro-cyber-security
+  - intro-cyber-security
 ---
 Threat and risk assessments are a crucial component of any robust cybersecurity strategy.  By systematically analysing potential threats and vulnerabilities, organisations can transform an overwhelming challenge into a manageable and actionable plan.   This process not only helps in prioritising security efforts but also provides a clear understanding of the risks an organisation faces, enabling a more informed and proactive approach to protection.
 

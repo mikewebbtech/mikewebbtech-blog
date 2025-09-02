@@ -7,7 +7,8 @@ categories:
   - security
 tags:
   - notes
-series: intro-cyber-security
+series: 
+  - intro-cyber-security
 ---
 
 # Cyber Security.  Not What I Though!

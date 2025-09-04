@@ -1,13 +1,13 @@
 ---
 date: 2025-07-03T21:09:33+08:00
-draft: false
+draft: true
 title: Cyber Security. Not What I thought
-summary: 
+summary:
 categories:
   - security
 tags:
   - notes
-series: 
+series:
   - intro-cyber-security
 ---
 

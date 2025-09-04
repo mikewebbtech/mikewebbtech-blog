@@ -29,35 +29,35 @@ in server complexity and security risks.
 
 #### Why Hugo? My Key Motivations
 
-**_Blazing Speed_**: This was a major draw. Hugo is renowned for
+**Blazing Speed**: This was a major draw. Hugo is renowned for
 online, making it easier to learn and troubleshoot.
 
-**_Version Control Friendly_**: Static sites are inherently easy to manage with
-version control systems like Git. This makes collaboration (if I  decide to create my own **_open-source_**  blog theme) and tracking changes a breeze.
+**Version Control Friendly**: Static sites are inherently easy to manage with
+version control systems like Git. This makes collaboration (if I  decide to create my own open-source  blog theme) and tracking changes a breeze.
 
-**_No Database Hassle_**: Eliminating the need for a databasesimplifies
+**No Database Hassle**: Eliminating the need for a database simplifies
 deployment and maintenance considerably. This aligns with my desire to focus on
 learning core infrastructure and security concepts without the added overhead
 of database management for my blog.
 
-### My Hugo Workflow
+**Content Separation**:  My content is decoupled from the website framework.   My content is just text files in markdown that I can organise separately to how my site is organised.  I can choose the tools I want for editing.  This opens up many advantages and opportunities I will explore as my site develops.
+
+### My Hugo Workflow (the plan)
 
 My workflow to implementing a Hugo site, hopefully, should be pretty straightforward:
 
 1. **Content Creation:** I write my blog posts in Markdown files, focusing on
    clearly articulating my experiences and insights.
 2. **Theme Selection and Customisation:** I've chosen a theme that resonates with my
-   style and have tweaked it to personalize the look and feel of "Architecting
-   Intelligence." Hugo's templating system makes this customization relatively
-   accessible.
-3. **Configuration:** The config.toml file is where I set up the site's basic
+   style and have tweaked it to personalise the look and feel.  Hugo's templating system makes this customisation relatively accessible.
+3. **Configuration:** The config.toml (or hugo.toml) file is where I set up the site's basic
    settings, menus, and parameters. It's surprisingly intuitive.
 4. **Building the Site:** With a simple hugo command in the terminal, the magic
    happens! Hugo rapidly transforms my Markdown content and theme into a complete
    static website in the public directory.
 5. **Deployment:** Deploying a static site is incredibly easy. I can simply upload
    the contents of the public folder to a web server or use services specifically
-   designed for static site hosting (like Netlify or GitHub Pages).
+   designed for static site hosting like Cloudflare Workers or GitHub Pages.
 
 ### Looking Ahead with Hugo
 

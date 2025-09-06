@@ -33,11 +33,11 @@ Here is an overview of my new directory structure:
 	└── content/
 		├── index.html
 		├── about.html
-		└── article -- git submodule pointer──
-													 |
-						 ┌──────────────────────
-						 |
-						 ▼
+		└── article --git submodule pointer-
+											|
+						┌───────────────────
+						|
+						▼
 ┌───────────────────────────────────────┐
 │        Submodule Repo (Articles)      │
 │  /Projects/mikewebbtech-blog/         │

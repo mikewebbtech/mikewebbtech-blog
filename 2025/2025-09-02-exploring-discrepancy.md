@@ -6,7 +6,7 @@ summary: Exploring in more detail the different types of discrepancies that can 
 tags:
   - notes
   - risk
-  - threat
+  - threats
 categories:
   - security
 series:

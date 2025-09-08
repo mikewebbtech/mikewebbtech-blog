@@ -9,6 +9,7 @@ tags:
   - risk
   - threats
   - assets
+  - notes
 series:
   - intro-cyber-security
 ---

@@ -7,6 +7,7 @@ categories:
   - security
 tags:
   - threats
+  - notes
 series:
   - intro-cyber-security
 ---

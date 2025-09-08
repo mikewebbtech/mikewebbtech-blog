@@ -8,6 +8,7 @@ categories:
 tags:
   - risk
   - threat
+  - notes
 series:
   - intro-cyber-security
 ---

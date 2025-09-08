@@ -8,6 +8,7 @@ categories:
 tags:
   - risk
   - managment
+  - notes
 series:
   - intro-cyber-security
 ---

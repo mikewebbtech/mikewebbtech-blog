@@ -7,7 +7,10 @@ categories:
   - security
 tags:
   - notes
-series: 
+  - controls
+  - risk
+  - managment
+series:
   - intro-cyber-security
 ---
 # Basics of Security Requirements

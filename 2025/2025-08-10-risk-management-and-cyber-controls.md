@@ -8,6 +8,7 @@ categories:
 tags:
   - risk
   - controls
+  - notes
 series:
   - intro-cyber-security
 ---

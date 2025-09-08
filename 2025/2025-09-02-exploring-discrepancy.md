@@ -1,11 +1,16 @@
 ---
 date: 2025-09-02T00:00:00+08:00
 draft: false
-title: "Exploring Implementation Discrepancy"
-summary:
+title: Exploring Implementation Discrepancy
+summary: Exploring in more detail the different types of discrepancies that can undermine control effectiveness, including issues with implementation, training, and a changing threat landscape. It provides practical insights into how to detect these gaps and offers a clear, action-oriented remediation checklist to ensure continuous improvement in cybersecurity defences.
 tags:
+  - notes
+  - risk
+  - threat
 categories:
+  - security
 series:
+  - intro-cyber-security
 ---
 *in my article on measuring security, I highlighted the importance of benchmarking control effectiveness.  A  benchmark is only a snapshot in time. The real work, and the true measure of a mature security program, is in  readdressing the discrepancies and remeasuring the effectiveness of controls implemented.   This process goes from static evaluation into **continuous improvement cycle**, ensuring that security controls are not just in place but are actively and effectively protecting an organisation.*
 

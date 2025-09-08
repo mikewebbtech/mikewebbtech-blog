@@ -2,7 +2,7 @@
 date: 2025-08-30T08:00:00+08:00
 draft: false
 title: Measuring Security
-summary:
+summary: This article explores the critical process of benchmarking control effectiveness, which ensures security safeguards provide intended protection. It examines how organizations can leverage frameworks like the Essential Eight, NIST, and ISO to measure maturity and track progress. The summary also highlights the importance of addressing discrepancies for continuous improvement and a stronger defense.
 tags:
   - controls
   - managment

@@ -23,13 +23,9 @@ Control effectiveness is a measure of how well a security control is functioning
 The provided resources outline several effectiveness levels:
 
 - **Highly Effective**: The control is fully designed, in place, and tested, providing significant protection.
-
 - **Partially Effective**: The control is in place but may not always be communicated or used correctly, and might not provide adequate protection.
-
 - **Largely Ineffective**: There are significant gaps in the control, and it does not operate effectively.
-
 - **Ineffective**: The control provides no protection at all and there is no confidence in its ability to protect assets.
-
 By assigning these ratings, an organisation can effectively benchmark its security controls and understand where its defences are strong and where they are weak.
 
 To measure progress, organisations can track key performance indicators (**KPIs**) such as the percentage of controls rated as highly effective, the time it takes to remediate critical vulnerabilities, or the success rate of backup and recovery procedures.
@@ -51,9 +47,9 @@ By leveraging such models, organizations can go beyond simple pass/fail evaluati
 
 |Framework|Focus Area|Benchmarking Method|Industry Use Case Example|
 |---|---|---|---|
-|**Essential Eight (ACSC)**|Practical mitigation strategies (e.g., patching, MFA, backups)|**Maturity levels 0–3** (from not implemented to fully embedded)|Used by Australian government and regulated sectors to assess resilience against ransomware and targeted attacks|
-|**NIST CSF**|Five functions: Identify, Protect, Detect, Respond, Recover|**Implementation Tiers 1–4**(Partial → Adaptive)|Widely used in U.S. critical infrastructure and industries aligning security with business risk|
-|**ISO/IEC 27002**|Comprehensive catalog of security controls (access control, cryptography, operations security, etc.)|**Audit-based benchmarking**(controls fully applied, partially applied, or absent)|Used internationally for compliance, certifications, and aligning with ISO/IEC 27001 ISMS requirements|
+|Essential Eight (ACSC)|Practical mitigation strategies (e.g., patching, MFA, backups)|Maturity levels 0–3 (from not implemented to fully embedded)|Used by Australian government and regulated sectors to assess resilience against ransomware and targeted attacks|
+|NIST CSF|Five functions: Identify, Protect, Detect, Respond, Recover|Implementation Tiers 1–4 (Partial → Adaptive)|Widely used in U.S. critical infrastructure and industries aligning security with business risk|
+|ISO/IEC 27002|Comprehensive catalog of security controls (access control, cryptography, operations security, etc.)|Audit-based benchmarking (controls fully applied, partially applied, or absent)|Used internationally for compliance, certifications, and aligning with ISO/IEC 27001 ISMS requirements|
 
 Each of these frameworks provides a structured way to measure whether security controls are operating as intended. The Essential Eight offers a practical baseline focused on progressive resilience, NIST CSF aligns cybersecurity maturity with business risk management, and ISO/IEC 27002 provides a globally recognised benchmark for comprehensive control coverage.  Together, they illustrate that effectiveness is not just about having controls in place but about continually **testing**, **refining**, and **demonstrating** that those controls deliver **real protection**.
 

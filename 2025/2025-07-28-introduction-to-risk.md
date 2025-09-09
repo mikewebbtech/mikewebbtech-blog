@@ -23,15 +23,10 @@ Risk is defined as *"the effect of uncertainty on objectives".*  In the context
 The risk assessment process is crucial for arriving at a satisfactory level of risk and identifying necessary control measures. It is a continuous process that involves several key steps:
 
 - **Characterise the system:** Understand the assets and their context (processes, functions, applications).
-
 - **Identify threats:** Recognise the potential threats that could target the system.
-
 - **Determine inherent risk & impact:** Assess the potential impact of an event on people, places, and systems, and determine the inherent risk without any controls in place.
-
 - **Analyse the control environment:** Evaluate the existing security controls to see how well they mitigate the identified threats.
-
 - **Determine a likelihood rating:** Assess how likely the threat is to happen based on factors like causes and conditions.
-
 - **Calculate the risk rating:** Combine the impact and likelihood ratings to calculate the overall risk rating.
 
 The risk assessment aims to identify and document cybersecurity requirements.  This process also helps to determine the value of information systems and assets, and identify vulnerabilities such as weak encryption, missing authentication, and weak passwords.
@@ -49,15 +44,15 @@ The design of this process should be a collaborative effort, involving the peopl
 
 The process for managing risk is typically broken down into a series of steps:
 
-1. **Risk Identification:** Pinpointing and documenting potential threats and risks.
-2. **Risk Analysis:** Evaluating the identified risks, their potential impact, and their likelihood of occurrence.
-3. **Risk Evaluation and Ranking:** Prioritizing risks based on their severity.
-4. **Risk Treatment:** Deciding how to handle each risk, which could involve one of five control strategies:
-	  - **Defence Risk Control:** Implementing measures to remove or reduce the vulnerability.
-	   - **Transferal Risk Control:** Shifting the risk to another entity, such as through outsourcing.
-	   - **Mitigation Risk Control:** Reducing the potential impact of an incident.
-	   - **Acceptance Risk Control:** Choosing to do nothing about the threat and accepting the potential outcome.
-	  - **Termination Risk Control:** Removing the asset from the environment to eliminate the risk entirely.
-5. **Risk Monitor and Review:** Continuously evaluating the effectiveness of the implemented controls and processes to ensure they remain relevant.
+- **Risk Identification:** Pinpointing and documenting potential threats and risks.
+- **Risk Analysis:** Evaluating the identified risks, their potential impact, and their likelihood of occurrence.
+- **Risk Evaluation and Ranking:** Prioritizing risks based on their severity.
+- **Risk Treatment:** Deciding how to handle each risk, which could involve one of five control strategies:
+	  1. **Defence Risk Control:** Implementing measures to remove or reduce the vulnerability.
+	   2. **Transferal Risk Control:** Shifting the risk to another entity, such as through outsourcing.
+	   3. **Mitigation Risk Control:** Reducing the potential impact of an incident.
+	   4. **Acceptance Risk Control:** Choosing to do nothing about the threat and accepting the potential outcome.
+	  5. **Termination Risk Control:** Removing the asset from the environment to eliminate the risk entirely.
+- **Risk Monitor and Review:** Continuously evaluating the effectiveness of the implemented controls and processes to ensure they remain relevant.
 
 A robust cybersecurity framework is built on the pillars of asset identification, threat awareness, and a systematic approach to risk management. By understanding what to protect, what the threats are, and how to effectively manage the associated risks, organisations can build a resilient defense against an ever-evolving digital threat landscape.

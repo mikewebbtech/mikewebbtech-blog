@@ -19,13 +19,9 @@ Threat and risk assessments are a crucial component of any robust cybersecurity 
 Before diving into the assessment process, it's essential to understand the different categories of risk that can impact an organisation.  These risks extend beyond the purely technical and can have significant business consequences.
 
 - **Strategic risk:** This refers to risks that can threaten an organization's core business objectives and future viability. An example could be the reputational damage from a major data breach that causes customers to lose trust and go to a competitor.
-
 - **Reputational risk:** This is the risk of damage to an organization's brand and public image.  A security incident that reveals a lack of care for customer data can quickly erode trust and lead to long-term financial and social consequences.
-
 - **Operational risk:** This is the risk of loss resulting from failed internal processes, people, and systems.  A cyberattack that disrupts critical business operations, such as manufacturing or supply chain management, falls under this category.
-
 - **Transactional risk:** This is the risk of loss from failed or fraudulent transactions.  For example, a man-in-the-middle attack that compromises online payments, leading to financial loss for both the business and its customers.
-
 - **Compliance risk:** This is the risk of not meeting legal or regulatory requirements.  Failing to comply with data protection laws like GDPR or HIPAA can result in substantial fines and legal action.
 
 ### Steps to a Risk Assessment
@@ -35,15 +31,10 @@ A risk assessment, also known as a **Threat and Risk Assessment**  (*TRA*), is a
 The process involves a series of logical steps:
 
 1. **Characterize the system:** Begin by gaining a thorough understanding of the system you are assessing. This includes identifying all the assets, hardware, software, data, and processes—and understanding their context within the organisation.
-
 2. **Identify threats:** Recognise the potential malicious acts that could harm the system. This involves looking at a variety of threats, from insider attacks to external threats like ransomware and phishing.
-
 3. **Determine inherent risk & impact:** Assess the potential impact of a threat event on people, places, and systems. This step helps you understand the gravity of an incident without considering any existing security controls.
-  
-4. **Analyze the control environment:** Evaluate your existing security controls and their effectiveness in mitigating the identified threats. This helps you determine if your current defenses are sufficient.
-  
+4. **Analyse the control environment:** Evaluate your existing security controls and their effectiveness in mitigating the identified threats. This helps you determine if your current defenses are sufficient.
 5. **Determine a likelihood rating:** Assess the probability that a specific threat will occur, taking into account the weaknesses or vulnerabilities that could be exploited.
-  
 6. **Calculate the risk rating:** Combine the impact and likelihood ratings to determine the overall risk. This provides a clear, quantitative or qualitative measure of the risk level.
 
 ### Performing a Threat and Risk Assessment
@@ -52,4 +43,4 @@ The *TRA* process is a continuous loop that begins with the **asset register**�
 
 Once a risk has been calculated, a *control* must be developed to manage it.  This can involve a variety of approaches, such as **accepting** the risk, **avoiding** the activity that causes the risk, or **mitigating** it through alternate/indirect security controls.
 
-The benefits of a thorough risk assessment are far-reaching. They not only help in **reducing long-term damages** as financial costs and reputational damage,  by preventing  incidents but also to ensure **regulatory compliance**, significantly **reduce the likelihood of data breaches**, and provide a reusable **risk assessment template** for ongoing use. Ultimately, a well-executed             * TRA* is the compass that guides an organisation's cybersecurity efforts, ensuring they are always pointed in the right direction.
+The benefits of a thorough risk assessment are far-reaching. They not only help in **reducing long-term damages** as financial costs and reputational damage,  by preventing  incidents but also to ensure **regulatory compliance**, significantly **reduce the likelihood of data breaches**, and provide a reusable **risk assessment template** for ongoing use. Ultimately, a well-executed * TRA* is the compass that guides an organisation's cybersecurity efforts, ensuring they are always pointed in the right direction.

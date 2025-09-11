@@ -41,19 +41,19 @@ The human element is a common point of failure. This type of discrepancy appears
 ### Changes in the threat landscape or business environment
 A security control that was once effective may become insufficient as the threat landscape evolves or the business model changes. This is common when new threat variants emerge, or when an organisation undergoes a significant transition.
 
-**What it looks like:** Controls that were once sufficient but no longer address new attack vectors or business models (cloud, remote workers, new software).  
-**Common causes:** New threat variants, SaaS/cloud migrations, mergers/acquisitions, changes in data flows, *third-party supply chain exposure*.  
-**How to detect:** Spikes in relevant indicators (alerts, [IOC hits](https://www.teramind.co/blog/how-to-recognize-indicators-of-compromise/)), threat intel advisories ([Alerts](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories)),  *emerging legislation and compliance obligations,* or control tests that suddenly fail (audits, pen-tests).  
-**Remediation:**  Revisit threat models and *TRAs*, update control selection and priorities, deploy *compensating controls* where immediate fixes aren’t possible, accelerate detection capabilities, and schedule targeted reassessments after major business changes.  
-**Example:** An organisation migrates workloads to cloud storage but retains on-premise access controls, exposing data via misconfigured buckets/blobs.
+- **What it looks like:** Controls that were once sufficient but no longer address new attack vectors or business models (cloud, remote workers, new software).  
+- **Common causes:** New threat variants, SaaS/cloud migrations, mergers/acquisitions, changes in data flows, *third-party supply chain exposure*.  
+- **How to detect:** Spikes in relevant indicators (alerts, [IOC hits](https://www.teramind.co/blog/how-to-recognize-indicators-of-compromise/)), threat intel advisories ([Alerts](https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories)),  *emerging legislation and compliance obligations,* or control tests that suddenly fail (audits, pen-tests).  
+- **Remediation:**  Revisit threat models and *TRAs*, update control selection and priorities, deploy *compensating controls* where immediate fixes aren’t possible, accelerate detection capabilities, and schedule targeted reassessments after major business changes.  
+- **Example:** An organisation migrates workloads to cloud storage but retains on-premise access controls, exposing data via misconfigured buckets/blobs.
 
 ### Lack of supporting processes or resources
 Even with the right controls selected and implemented, a lack of operational support can render them ineffective. This discrepancy is seen in persistent vulnerability backlogs, long times to remediate (MTTR), and a lack of necessary tooling or staff.
 
-**What it looks like:** Vacancies or team skill gaps, long remediation queues, no runbooks, excessive infrastructure technical debt, or missing/insufficient systm observability.  
-**Common causes:** Constrained budgets, no prioritisation, inadequate tooling, lack of *executive sponsorship*, or immature operational processes.  
-**How to detect:** Persistent vulnerability backlogs, long mean-time-to-remediate (MTTR), missed SLAs, insufficient logging coverage, or audit findings that find process deficiencies.  
-**Remediation:** Define minimum operational standards (logging, monitoring, runbooks), Investing in automation and tooling (patch management, SIEM), consider managed services or temporary contractors to close gaps, and secure executive level investment in prioritisation and funding for critical fixes.  
-**Example:** A small security team cannot keep up with patching because the process is manual and there is no automation to stage and deploy updates.
+- **What it looks like:** Vacancies or team skill gaps, long remediation queues, no runbooks, excessive infrastructure technical debt, or missing/insufficient systm observability.  
+- **Common causes:** Constrained budgets, no prioritisation, inadequate tooling, lack of *executive sponsorship*, or immature operational processes.  
+- **How to detect:** Persistent vulnerability backlogs, long mean-time-to-remediate (MTTR), missed SLAs, insufficient logging coverage, or audit findings that find process deficiencies.  
+- **Remediation:** Define minimum operational standards (logging, monitoring, runbooks), Investing in automation and tooling (patch management, SIEM), consider managed services or temporary contractors to close gaps, and secure executive level investment in prioritisation and funding for critical fixes.  
+- **Example:** A small security team cannot keep up with patching because the process is manual and there is no automation to stage and deploy updates.
 
 Determining root causes and acting on them is the key to turning benchmarking into tangible improvement. By addressing discrepancies, from improper implementation to shifts in the environment, and following a clear remediation process, an organisation can close security gaps faster and raise its overall control effectiveness.  This *action oriented* approach ensures that cyber security is not just a static check list but a living, dynamic defence cycle that continuously adapts to protect an organisation’s most valuable assets.

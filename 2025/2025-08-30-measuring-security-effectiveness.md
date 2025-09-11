@@ -58,9 +58,6 @@ Each of these frameworks provides a structured way to measure whether security c
 
 Benchmarking is only useful if the results  are actionable.  After determining the effectiveness of controls, discrepancies must be reviewed and addressed. This requires formal discussions with stakeholders across the organisation to reconcile differences between expectations, requirements, and "operational reality".
 
-> [!note]
-> There are four major types  of discrepancies and are a major topic in itself that will be best addresses as a separate article examining these in a detailed and practical expansion for each discrepancy type with root causes, detection signals, remediation actions, and short examples
-
 Discrepancies highlight the gap between how a control is designed and how it actually performs in practice.  
 
 Discrepancies usually stem from:
@@ -68,6 +65,9 @@ Discrepancies usually stem from:
 - Insufficient communication or training.
 - Shifts in the threat landscape or business environment.
 - Lack of supporting processes or resources.
+
+> [!info] 
+> These discrepancies and are a major topic in itself that will be best addresses as a separate article examining these in a detailed and practical expansion for each discrepancy type with root causes, detection signals, remediation actions, and short examples. **[Take a moment to learn more here](../2025-09-02-exploring-discrepancy).**
 
 Determining causes and acting on them creates benchmarks to improvement.  Addressing the four discrepancy types above with detection, prioritisation, and measurable remediation closes gaps faster and raises overall control effectiveness.
 

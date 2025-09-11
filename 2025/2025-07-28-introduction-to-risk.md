@@ -33,7 +33,7 @@ The risk assessment aims to identify and document cybersecurity requirements.  
 
 ### Designing a Process to Manage Risk
 
->[!success]
+>[!success] Key to Success
 >A well-designed risk management process is not a separate, standalone function but is integrated into an organisation's decision-making. 
 
 The process should be a clear sequence of steps that achieves a desired outcome and provides a tangible benefit. An effective process is one that yields reliable outcomes, clarifies resource needs, reduces inefficiency, and enforces accountability, all of which ultimately reduce risk and create value.

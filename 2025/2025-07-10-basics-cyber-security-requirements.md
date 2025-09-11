@@ -19,6 +19,16 @@ series:
 
 In my ICT networking course we have a very hands on approach to implementing network and systems security.  We also cover addressing  an organisations cyber security requirements and contribute to cyber security risk management.  Both these delivered  the required skills and knowledge to identify and address cyber risks to digital assets in an SME environment.
 
+> [!example] Resources
+>  The main resources I have taken my notes on cyber security are:
+>   - The ICT Networking course material, that was  so well put together and delivered, buy my lecturer,
+>   - The course material from the [Fortinet Certified Associate in Cybersecurity](https://training.fortinet.com/local/staticpage/view.php?page=fca_cybersecurity)
+>   - The Australian Cyber Security Center of the Australian  Government Signals Directorate.  [cyber.gov.au](https://cyber.gov.au)
+> 	  - [Mitigating cybersecurity incidents](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/mitigating-cybersecurity-incidents)
+> 	  - The wealth of guidelines in the [Information Security Manual](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/ism/cybersecurity-guidelines)
+> 	  - The [Essential Eight](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight) mitigation strategies and [Maturity Models](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model)
+
+
 In today's digital landscape, cybersecurity isn't a technical add-on; it's a fundamental business requirement.  To effectively protect the **confidentiality, integrity** and **availability** of an organisation data and infrastructure (*digital and physical*), a systematic approach is needed, starting with the core process of analysing  cyber security requirements.  This process lays the groundwork for risk management and control implementation efforts.
 
 #### The Foundation: Assets, Threats, and Risk
@@ -30,6 +40,7 @@ An **asset register** is a foundational tool that documents all valuable **Inf
 
 With the assets identified,  a **threat and risk assessment (TRA)** can be undertaken.  This is a systematic process to  identify vulnerabilities, assess potential threats, and evaluate the resulting security risks.  The goal is to identify and document the organisation's specific cybersecurity requirements. A *TRA* goes beyond just technical risk, also considering the potential for reputational, operational, transactional, and compliance risks.
 
+#### Mitigation 
 ####  Establishing a Framework and a Maturity Level
 
 > [!TIP]
@@ -46,9 +57,9 @@ The Essential 8 framework, for example, offers four maturity levels (from Zero t
 - Progressively implementing each level.
 - Aiming for a consistent maturity level across all eight strategies.
 > [!TASK]
-> Essential 8 is an topic, especially for Australian organisations, and deserving of more attention. In the future I should have more articles: 
-> - More detail on the *ASD*,  *ACSC*, cyber.gov.au, Essential 8,  and the  Information Security Manual  (*ISM*). **[Find article here](2025-07-12-intro-to-asd.md).**
-> - Essential 8 maturity levels
+> [Essential 8](2025-07-13-intro-to-essential-8) is an topic, especially for Australian organisations, and deserving of more attention. In the future I should have more articles: 
+> - More detail on the *ASD*,  *ACSC*, cyber.gov.au, Essential 8,  and the  Information Security Manual  (*ISM*). **[Find article here](../2025-07-12-intro-to-asd).**
+> - Essential 8 maturity levels.
 > - Mapping between the *Essential Eight maturity model* strategies and *ISM* controls to achieve a desired  Maturity Level.
 
 By embracing a **model driven approach**, organisations can create a roadmap for improving their cybersecurity posture.   This strategy ensures that security efforts are prioritised and that controls are aligned and mutually reinforcing.   For example, implementing one strategy at a lower maturity level could reduce the effectiveness of another strategy at a higher level.   By progressively implementing controls to reach a desired level of security, an organisation can ensure its controls align with its risk appetite and compliance obligations.

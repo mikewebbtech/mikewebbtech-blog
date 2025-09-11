@@ -10,11 +10,12 @@ tags:
 categories:
   - security
 series:
+  - intro-cyber-security
 ---
 
 ####  Essential Eight Maturity Levels
 
-The Essential Eight framework defines four maturity levels, which allow organisations to progressively implement the strategies based on their risk appetite. A key goal is to achieve a consistent maturity level across all eight strategies.
+The Essential Eight is a set eight mitigation strategies and  defines four maturity levels, which allow organisations to progressively implement the strategies based on their risk appetite. A key goal is to achieve a consistent maturity level across all eight strategies.
 
 - **Maturity Level Zero:** This level indicates significant weaknesses and a lack of alignment with any of the Essential Eight controls. An organisation at this level is vulnerable to basic cyber threats.
 - **Maturity Level One:** This level is focused on defending against basic, opportunistic threats, such as those that use phishing, reused credentials, or unpatched systems. It requires an organisation to have implemented some of the baseline controls.

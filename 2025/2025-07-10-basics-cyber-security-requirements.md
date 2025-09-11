@@ -57,7 +57,7 @@ The Essential 8 framework, for example, offers four maturity levels (from Zero t
 - Progressively implementing each level.
 - Aiming for a consistent maturity level across all eight strategies.
 > [!TASK]
-> [Essential 8](2025-07-13-intro-to-essential-8) is an topic, especially for Australian organisations, and deserving of more attention. In the future I should have more articles: 
+> [Essential 8](../2025-07-13-intro-to-essential-8) is an topic, especially for Australian organisations, and deserving of more attention. In the future I should have more articles: 
 > - More detail on the *ASD*,  *ACSC*, cyber.gov.au, Essential 8,  and the  Information Security Manual  (*ISM*). **[Find article here](../2025-07-12-intro-to-asd).**
 > - Essential 8 maturity levels.
 > - Mapping between the *Essential Eight maturity model* strategies and *ISM* controls to achieve a desired  Maturity Level.

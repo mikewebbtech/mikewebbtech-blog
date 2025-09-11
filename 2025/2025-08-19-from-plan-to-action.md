@@ -1,7 +1,7 @@
 ---
 date: 2025-08-19T00:00:00+08:00
 draft: false
-title: From Plan to Action
+title: Implement Security Controls 
 summary: This article examines the process of implementing cybersecurity controls, progressing from strategy to implemented controls.  It outlines the steps to plan, execute, and test security defences to effectively address vulnerabilities.  This ensures that controls are not only implemented but also well documented and maintained for effectiveness.
 tags:
   - controls
@@ -13,9 +13,11 @@ categories:
 series:
   - intro-cyber-security
 ---
+
 *In a previous article, I looked at how risk mitigation plans succeed only when supported by strong communication, change management, and continuous monitoring. With a plan in place, the next stage is implementation. This article focuses on selecting, implement, test, and document cyber security controls so that a strategy moves beyond planning into measurable action.*
 
 #  Implementing Cyber Security Controls
+### From plan to action
 
 Once a risk mitigation plan is in place, the next priority is to go from strategy to execution. The transition requires more than identifying risks and selecting controls, it needs a structured  implementation plan, targeted  testing, and clear documentation.  This ensures that security controls move beyond a mitigation strategy and become practical, effective defences integrated into the organisations  operations.
 
@@ -26,7 +28,8 @@ Implementation begins with developing clear, detailed plans for addressing ident
 An effective rollout should be guided by the adopted cyber security framework (e.g. The Essential 8), providing consistency and helping the organisation move toward a higher maturity level.  By combining governance alignment, risk appetite considerations, and stakeholder engagement, the implementation process goes from controls into both technically effective sustainable defences.
 
 ---
-Controls fall into three categories:
+Cybersecurity controls usually fall into  one of three categories:
+
  **1. Preventative Controls**
 Are designed to stop a cyber incident before it can happen. These are proactive measures that reduce the likelihood of a threat exploiting a vulnerability. An example is requiring all employees to complete mandatory cybersecurity training, which helps to prevent them from falling for phishing scams. Other examples include firewalls, access control policies, and strong password requirements.
 

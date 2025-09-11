@@ -1,5 +1,5 @@
 ---
-date: 2025-08-1T11:42:52+08:00
+date: 2025-08-01T11:42:52+08:00
 draft: false
 title: Introduction to Cyber Incident Response Plan
 summary:

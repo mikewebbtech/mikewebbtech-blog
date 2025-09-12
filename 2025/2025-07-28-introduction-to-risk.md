@@ -12,6 +12,7 @@ tags:
 series:
   - intro-cyber-security
 ---
+
 # Introduction to Risk
 
 ### What is Risk?
@@ -33,8 +34,8 @@ The risk assessment aims to identify and document cybersecurity requirements.  
 
 ### Designing a Process to Manage Risk
 
->[!success] Key to Success
->A well-designed risk management process is not a separate, standalone function but is integrated into an organisation's decision-making. 
+> [!success] Key to Success
+> A well-designed risk management process is not a separate, standalone function but is integrated into an organisation's decision-making. 
 
 The process should be a clear sequence of steps that achieves a desired outcome and provides a tangible benefit. An effective process is one that yields reliable outcomes, clarifies resource needs, reduces inefficiency, and enforces accountability, all of which ultimately reduce risk and create value.
 
@@ -48,11 +49,12 @@ The process for managing risk is typically broken down into a series of steps:
 - **Risk Analysis:** Evaluating the identified risks, their potential impact, and their likelihood of occurrence.
 - **Risk Evaluation and Ranking:** Prioritizing risks based on their severity.
 - **Risk Treatment:** Deciding how to handle each risk, which could involve one of five control strategies:
-		  1. **Defence Risk Control:** Implementing measures to remove or reduce the vulnerability.
-		   2. **Transferal Risk Control:** Shifting the risk to another entity, such as through outsourcing.
-		   3. **Mitigation Risk Control:** Reducing the potential impact of an incident.
-		   4. **Acceptance Risk Control:** Choosing to do nothing about the threat and accepting the potential outcome.
-		  5. **Termination Risk Control:** Removing the asset from the environment to eliminate the risk entirely.
+  1. **Defence Risk Control:** Implementing measures to remove or reduce the vulnerability.
+  2. **Transferal Risk Control:** Shifting the risk to another entity, such as through outsourcing.
+  3. **Mitigation Risk Control:** Reducing the potential impact of an incident.
+  4. **Acceptance Risk Control:** Choosing to do nothing about the threat and accepting the potential outcome.
+  5. **Termination Risk Control:** Removing the asset from the environment to eliminate the risk entirely.
 - **Risk Monitor and Review:** Continuously evaluating the effectiveness of the implemented controls and processes to ensure they remain relevant.
 
 A robust cybersecurity framework is built on the pillars of asset identification, threat awareness, and a systematic approach to risk management. By understanding what to protect, what the threats are, and how to effectively manage the associated risks, organisations can build a resilient defense against an ever-evolving digital threat landscape.
+

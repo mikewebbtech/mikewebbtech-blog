@@ -13,22 +13,62 @@ series:
   - intro-cyber-security
 ---
 
-####  Essential Eight Maturity Levels
+# The Essential Eight 
+### and Maturity Levels
 
-The Essential Eight is a set eight mitigation strategies and  defines four maturity levels, which allow organisations to progressively implement the strategies based on their risk appetite. A key goal is to achieve a consistent maturity level across all eight strategies.
+The **Essential Eight** is a baseline set of mitigation strategies recommended by the Australian Cyber Security Centre (ACSC). These strategies help organisations defend against a broad spectrum of cyber threats—from low-level opportunistic attacks to more advanced, persistent threats.
 
-- **Maturity Level Zero:** This level indicates significant weaknesses and a lack of alignment with any of the Essential Eight controls. An organisation at this level is vulnerable to basic cyber threats.
-- **Maturity Level One:** This level is focused on defending against basic, opportunistic threats, such as those that use phishing, reused credentials, or unpatched systems. It requires an organisation to have implemented some of the baseline controls.
-- **Maturity Level Two:** At this level, an organisation has implemented controls that are effective against more targeted and capable threats. This includes enhanced defenses for better protection against sophisticated cyber-attacks.
-- **Maturity Level Three:** This is the highest level, designed to defend against adaptive, persistent, and more advanced threats. An organisation at this level demonstrates a robust and resilient security posture.
+A key feature of this framework is its **four maturity levels**, which enable organisations to progressively strengthen their security posture according to risk appetite, operational needs, and available resources. Importantly, to reach a specific maturity level, organisations must implement all eight strategies at that level—consistency is critical, rather than excelling in a few areas and neglecting others.
 
-The provided documents mention that a registered training organisation is required to meet Maturity Level Two to ensure the confidentiality of student information.
+> [!important] 
+> To achieve a maturity level, all Essential Eight strategies must be implemented at the same level.
 
-#### **Mapping Essential Eight Strategies to ISM Controls**
+---
 
-The Essential Eight is not a standalone solution; it complements other frameworks and manuals like the ISM. The ISM provides a comprehensive catalog of information security controls. To achieve a desired Essential Eight Maturity Level, an organization can map its chosen strategies to the specific controls outlined in the ISM. This provides a clear, structured way to implement and track progress toward a more resilient security posture.
+#### The Eight Strategies
 
-For example, achieving a higher maturity level for the "Multi-Factor Authentication" strategy would involve progressively implementing MFA more thoroughly across the organisation. This disciplined approach ensures that security controls are not just in place, but that they are actively tested, refined, and demonstrated to deliver real protection.
+**1\. Application Control:**  
+Restrict and whitelist which applications can run on systems. This prevents malicious or unapproved software from executing, protecting against many forms of malware and unauthorised applications.
+    
+**2\. Patch Applications:**  
+Regularly update all software to remediate known vulnerabilities promptly. Keeping applications patched is fundamental for closing security gaps that could be exploited by attackers.
+    
+**3\. Configure Microsoft Office Macro Settings:**  
+Block untrusted macros in Microsoft Office. Attackers often use macros to deliver malware, so disabling or restricting them helps prevent common social engineering attacks.
+    
+**4\. User Application Hardening:**  
+focuses on configuring software to reduce its potential attack surface. Disabling or removing unnecessary features, plugins, or services that could be exploited by an attacker.
+    
+**5\. Restrict Administrative Privileges:**  
+Limit administrative access strictly to those who absolutely need it for business purposes. Restricting privileges reduces the chance of attackers gaining elevated access if they breach a user account.
+    
+**6\. Patch Operating Systems:** 
+Apply updates and patches to all operating systems in a timely manner. This protects against exploits that specifically target OS-level vulnerabilities.
+    
+**7\. Multi-Factor Authentication (MFA):**  
+   Require multiple forms of identity verification for system and application access. MFA adds an extra layer of security, making it significantly harder for attackers to gain access even if credentials are compromised.
+    
+**8\. Regular Backups:**  
+Regular and secure backups ensure quick recovery if data is lost, corrupted, or encrypted f or ransom.  Backups are an important defence for business continuity.
 
+---
 
-The Essential Eight provides a clear and actionable roadmap for organizations to improve their cyber resilience. By understanding and progressively implementing the strategies across the maturity levels, businesses can proactively defend against a wide range of cyber threats. This framework, supported by detailed guidance from the ACSC and complemented by the ISM, empowers organizations to build a dynamic and effective security posture that adapts to an ever-changing threat landscape.
+## The Four Maturity Levels
+
+**Maturity Level Zero:**  
+There are significant weaknesses; few or none of the Essential Eight strategies are implemented. The organisation is highly exposed, even to basic threats.
+
+**Maturity Level One:**  
+Basic protections are in place to defend against opportunistic threats, such as phishing, password reuse, or malware exploiting unpatched systems.
+
+**Maturity Level Two:**  
+Enhanced controls are implemented to stop more targeted and capable threats. At this level, attackers encounter stronger resistance and more robust protections.
+
+**Maturity Level Three:**  
+The highest level as defined by the ACSC. Security practices are mature, consistent, and resilient, with cyber resilience embedded into daily operations to defend against advanced, persistent threats.
+
+---
+
+The Essential Eight offers more than just technical guidance, it provides a practical, progressing strategy for improvement.  Organisations do not need to reach the highest maturity level immediately; instead, they can progressively strengthen each of the eight strategies in parallel, reducing risk based on a threat risk assessment. This progressive approach in implementing controls is then sustainable, realistic, and measurable.
+
+By adopting Essential Eight strategies into a broader cyber security framework, organisations can achieve a **layered defence**that adapts to evolving threats and infrastructure. This consistency and adaptability are key to maintaining resilience in a rapidly changing threat landscape.

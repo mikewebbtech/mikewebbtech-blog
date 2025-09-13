@@ -14,7 +14,7 @@ series:
 # Cyber Security.  Not What I Though!
 ### But I Like It...It's strangely familiar
 
-When I first approached cyber security, I expected something closer to what most people see in films: hooded figures typing furiously, digital spycraft, and last-minute hacks that turn the tide in seconds. What I discovered instead was very different — and much more familiar.
+When I first approached cyber security, I expected something closer to what most people see in films: hooded figures typing furiously, digital spycraft, and last-minute counter hacks and tracers pinging around the globe. What I discovered instead was very different and much more familiar.
 
 Cyber security is not about Hollywood drama. It is about process. It is about structure, documentation, and discipline. It is about planning ahead, following standards, and testing until systems prove they can stand up under pressure.
 
@@ -54,14 +54,14 @@ Having worked in commissioning and industrial testing, many of the practices dir
 
 #### Rethinking What Cyber Security Means
 
-This experience changed my perspective.  Cyber security isn’t about waiting for a villain to strike.  It’s about embedding resilience by design.  Success in cyber security comes not reacting to incidents but from proactively identifying and addressing vulnerabilities before threats impact operations, similar to how a commissioning engineer ensures a system is safe and fully operational before handover.
+This experience changed my perspective.  Cyber security isn’t about waiting for a hackers to strike.  It’s about embedding resilience by design.  Success in cyber security comes from not reacting to incidents but from proactively identifying and addressing vulnerabilities before threats impact operations.  This is similar to how a commissioning engineer ensures a system is safe and fully operational before handover.
 
 #### Lessons from Industrial testing and the Transition into Cyber Security
 
-Coming from an industrial testing background, I’ve found that many of the skills and disciplines I developed translate directly into cyber security.  I can apply my experience in procedure writing, systematic test planning to designing and implementing security controls, treating cyber security test matrices much like commissioning test sheets.
+Coming from my industrial background, I’ve found that many of the skills and disciplines I developed translate directly into cyber security.  My experience in procedure writing, systematic test planning  can apply to the designing and implementing security controls, treating cyber security test matrices much like commissioning test sheets.
 
-I find a strong comparison between acceptance criteria and sign-off processes from commissioning and evaluating control effectiveness in networked information environments, using familiar benchmarks to assess security posture.  My rigorous documentation habits around incident response, change control, and audit trails ensure traceability and compliance within the cyber teams I work with.
+I find a strong comparison between acceptance criteria and sign-off processes from commissioning and evaluating control effectiveness in networked information environments, using familiar benchmarks to assess security posture.  Processes around documentation, planning incident response, change management, and audit trails contribute to traceability and compliance in cybersecurity mitigation and incident respons plans.
 
-I bring a culture of specification-driven verification, moving beyond ad hoc configurations to insist on evidence-based validation of security controls. My understanding of risk, governance, and operational assurance allows me to contribute quickly and lead by example in establishing structured verification and compliance practices.
+I can bring a culture of specification driven verification, moving beyond ad hoc configurations to implementing evidence based validation of security controls.  My understanding of risk, governance, and operational assurance will allows me to contribute quickly and lead in establishing structured verification and compliance practices.
 
 Cyber security turned out to be less about hacking and more about structured "assurance". For me, that made it not only approachable but engaging. Commissioning and testing, taught me the value of procedure, verification and documenting, and in cyber security, that understanding and mindset is not only helpful, it’s essential.

@@ -40,7 +40,6 @@ An **asset register** is a foundational tool that documents all valuable **Inf
 
 With the assets identified,  a **threat and risk assessment (TRA)** can be undertaken.  This is a systematic process to  identify vulnerabilities, assess potential threats, and evaluate the resulting security risks.  The goal is to identify and document the organisation's specific cybersecurity requirements. A *TRA* goes beyond just technical risk, also considering the potential for reputational, operational, transactional, and compliance risks.
 
-#### Mitigation 
 ####  Establishing a Framework and a Maturity Level
 
 > [!TIP]
@@ -50,7 +49,7 @@ With the assets identified,  a **threat and risk assessment (TRA)** can be unde
 
 **maturity level model**.  Is a  crucial way to measure the sophistication and effectiveness of an organisation's security controls and processes.  It provides a benchmark to assess where an organisation stands in its cybersecurity requirements and what steps it needs to undertake to improve
 
-**Essential 8**.  Is a set of eight cyber security mitigation strategies developed by the Australian Signals Directorate (*ASD*), the Australian Cyber Security Center (*ACSC*) to aid in an organisation implementing *controls* against cyber threats.  These strategies focus on the critical security controls that  provides a roadmap for progressively enhancing an organisations cyber security posture.
+**Essential 8**.  Is a set of eight cyber security mitigation strategies developed by the Australian Signals Directorate (*ASD*), the Australian Cyber Security Center (*[ACSC](https://cyber.gov.au)*) to aid in an organisation implementing *controls* against cyber threats.  These strategies focus on the critical security controls that  provides a roadmap for progressively enhancing an organisations cyber security posture.
 
 The Essential 8 framework, for example, offers four maturity levels (from Zero to Three), allowing organisations to assess their current capabilities and plan for improvement.  It recommends a structured approach to implementation by:
 - Identifying and planning for a target maturity level based on your organisation’s risk appetite.
@@ -58,8 +57,8 @@ The Essential 8 framework, for example, offers four maturity levels (from Zero t
 - Aiming for a consistent maturity level across all eight strategies.
 > [!TASK]
 > [Essential 8](../2025-07-13-intro-to-essential-8) is an topic, especially for Australian organisations, and deserving of more attention. In the future I should have more articles: 
-> - More detail on the *ASD*,  *ACSC*, cyber.gov.au, Essential 8,  and the  Information Security Manual  (*ISM*). **[Find article here](../2025-07-12-intro-to-asd).**
-> - Essential 8 maturity levels.
+> - More detail on the *ASD*,  *ACSC*, [cyber.gov.au](https://cyber.gov.au), [Essential 8](../2025-07-13-intro-to-essential-8),  and the  Information Security Manual  (*ISM*). **[Find article here](../2025-07-12-intro-to-asd).**
+> - Essential 8 maturity levels. **[Read here](../2025-07-13-intro-to-essential-8)**
 > - Mapping between the *Essential Eight maturity model* strategies and *ISM* controls to achieve a desired  Maturity Level.
 
 By embracing a **model driven approach**, organisations can create a roadmap for improving their cybersecurity posture.   This strategy ensures that security efforts are prioritised and that controls are aligned and mutually reinforcing.   For example, implementing one strategy at a lower maturity level could reduce the effectiveness of another strategy at a higher level.   By progressively implementing controls to reach a desired level of security, an organisation can ensure its controls align with its risk appetite and compliance obligations.

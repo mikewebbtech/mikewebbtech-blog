@@ -2,7 +2,7 @@
 date: 2025-07-13T09:23:39+08:00
 draft: false
 title: Introducing the Essential 8
-summary:
+summary: The Essential Eight is a set of mitigation strategies from the Australian Cyber Security Centre that helps organisations build cyber resilience. The framework's four maturity levels provide a progressive roadmap for implementing control strategies.
 tags:
   - notes
   - controls

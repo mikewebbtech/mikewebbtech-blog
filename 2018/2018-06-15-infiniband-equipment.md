@@ -3,7 +3,8 @@ title: eBay Score of the Century
 date: 2018-06-15T03:09:38
 summary: how about a smoking network I'm redoing my home and lab network with the goal to go 10Gb/s.  Let's up that and go 40Gb/s and while were are at it let's take it even further with 56Gb/s....with a twist. I found Infiniband hardware cheaper then ethernet and it can do both
 draft: false
-categories: -networking
+categories: 
+  - networking
   - home-lab
 tags:
   - networking

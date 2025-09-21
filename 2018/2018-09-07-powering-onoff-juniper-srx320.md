@@ -4,6 +4,7 @@ date: 2018-09-07T09:48:15
 summary: Always use the graceful method unless absolutely necessary.  i.e don't just yank the power cord out. There is console less method and a CLI method over the network
 draft: false
 categories:
+  - networking
   - home-lab
 tags:
   - networking
@@ -11,6 +12,7 @@ tags:
   - juniper
 series:
 ---
+
 Always use the graceful method unless absolutely necessary.  i.e don't just yank the power cord out
 
 Graceful method with physical access to device with no console: Press and immediately release the Power button. The device begins gracefully shutting down the operating system and then powers itself off
@@ -52,3 +54,4 @@ Forced shutdown with physical access to device with no console: Press the Power 
 A more complete guide on syntax and options:
 
 [Junos system power off](https://www.juniper.net/documentation/en_US/junos/topics/reference/command-summary/request-system-power-off-srx-series.html)
+

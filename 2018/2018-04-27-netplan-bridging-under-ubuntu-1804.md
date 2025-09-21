@@ -4,6 +4,7 @@ date: 2018-04-27T16:40:42
 summary: The new trend in linux is the shift to netplan as a network manager that uses either NetworkManager  or  systemd-networkd to manage interfaces is pretty much the default now for Ubuntu Desktops.  This breaks OVS and linux bridging, but there is a way
 draft: false
 categories:
+  - networking
   - virtualisation
   - home-lab
 tags:
@@ -23,7 +24,7 @@ First up, I've got some mixed opinions on this push by many Linux Distros to mak
 
 But wait there is more and another curve ball introduced to the new 18.04 LTS and it's called Netplan [(would you like to know more?)](https://netplan.io/). After a quick read about it (re OVS not working) I get why it exists, but geez another level of complexity (or just yet another markup language to learn)..great!
 
-OK! so netplan is a renderer and is used to configure NM or networkd but to quote the website linked above *"Using networkd as a renderer does not let devices automatically come up using DHCP; each interface needs to be specified in a file in /etc/netplan for its configuration to be written and for it to be used in networkd."* (I think this also applies to OVS). Yep and I'm using DHCP so learn yaml for short.
+OK! so netplan is a renderer and is used to configure NM or networkd but to quote the website linked above _"Using networkd as a renderer does not let devices automatically come up using DHCP; each interface needs to be specified in a file in /etc/netplan for its configuration to be written and for it to be used in networkd."_ (I think this also applies to OVS). Yep and I'm using DHCP so learn yaml for short.
 
 **Sleeves up.**
 make sure you bridge-utilites installed
@@ -63,8 +64,8 @@ network:
   bridges:
     br0:
       interfaces: [enp7s0]
-      dhcp4: true 
-      dhcp6: no 
+      dhcp4: true
+      dhcp6: no
     br1:
       interfaces: [enp7s0]
       dhcp4: true
@@ -72,7 +73,8 @@ network:
 
 ```
 
-* Don't copy and pass the above, WP striped the proper yaml formatting so it won't work. I have a properly formatted example in my gist over at github [If you are interested](https://gist.github.com/mikewebb70/c46be8216e8f1594b1077f3d5220c22b)
+- Don't copy and pass the above, WP striped the proper yaml formatting so it won't work. I have a properly formatted example in my gist over at github [If you are interested](https://gist.github.com/mikewebb70/c46be8216e8f1594b1077f3d5220c22b)
+
 ---
 
 I found a great resource on more properties you could declare in this file specific to your network (static IP, VLANS, bonds, routes etc). [Check it out](https://cloudinit.readthedocs.io/en/latest/topics/network-config-format-v2.html#examples)
@@ -95,19 +97,20 @@ Check your handy work.
 
 ```
 mike@obsidian:~]$ networkctl list
-IDX LINK             TYPE               OPERATIONAL SETUP     
-  1 lo               loopback           carrier     unmanaged 
+IDX LINK             TYPE               OPERATIONAL SETUP
+  1 lo               loopback           carrier     unmanaged
   2 enp7s0           ether              carrier     configured
-  3 enp0s31f6        ether              off         unmanaged 
-  4 enp65s0f0        ether              off         unmanaged 
-  5 enp65s0f1        ether              off         unmanaged 
+  3 enp0s31f6        ether              off         unmanaged
+  4 enp65s0f0        ether              off         unmanaged
+  5 enp65s0f1        ether              off         unmanaged
   6 br0              ether              routable  configured
-  7 virbr0           ether              no-carrier  unmanaged 
-  8 virbr0-nic       ether              off         unmanaged 
-  9 lxdbr0           ether              routable  unmanaged 
+  7 virbr0           ether              no-carrier  unmanaged
+  8 virbr0-nic       ether              off         unmanaged
+  9 lxdbr0           ether              routable  unmanaged
 
 ```
 
 That should be enough ping out from the host and use br0 as the interface for lxd and KVM and the guest OS will pull valid IP settings from your network DHCP server and be able to ping out and be accessible from the local network (even pull down an install image from the network tftp server if you have set your KVM up fro network boot).
 
 As always. Beer and profit.
+

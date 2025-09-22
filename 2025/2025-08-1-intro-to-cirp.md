@@ -2,7 +2,7 @@
 date: 2025-08-01T11:42:52+08:00
 draft: false
 title: Introduction to Cyber Incident Response Plan
-summary:
+summary: A Cyber Incident Response Plan (CIRP) is needed to transform an organisation's approach to security incidents from panic to preparedness. It provides a structured playbook  for preparing, detecting, responding to, and recovering from a cybersecurity events.  A CIRP provides clear responsibilities and procedures, minimising harm and accelerating recovery.  Its value is in creating coordinated action in high-pressure situations, preventing disorganisation, and reducing the downtime, costs, and reputational damage that can result from a breach.
 tags:
   - notes
   - controls

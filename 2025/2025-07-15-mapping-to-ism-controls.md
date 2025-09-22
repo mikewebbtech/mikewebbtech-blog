@@ -2,7 +2,7 @@
 date: 2025-07-15T00:00:00+08:00
 draft: false
 title: Mapping Strategies to controls
-summary:
+summary: Mapping the Essential Eight to the Information Security Manual (ISM) gives organisations a clear and actionable guide for implementing each security strategy at the desired maturity level. This mapping translates objectives into controls that aligns with priorities and obligations, ensures progress is measurable and outcome driven
 tags:
   - notes
   - controls

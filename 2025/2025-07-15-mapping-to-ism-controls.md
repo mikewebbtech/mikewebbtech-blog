@@ -10,7 +10,7 @@ tags:
 categories:
   - security
 series:
-  - my-hugo-site
+  - intro-cyber-security
 ---
 
 # Mapping Essential 8 Strategies to ISM Controls

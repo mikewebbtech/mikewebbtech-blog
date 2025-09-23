@@ -15,7 +15,7 @@ series:
 
 # Cyber Incident Response Plan
 
-### Turn Panic to Preparedness
+### Turn Panic to Prepared
 
 When it comes to cyber security, the question is not *if* an incident will occur but *when*. This is just the reality of not only hosting or access services online, but just simply being being online.
 

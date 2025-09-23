@@ -49,8 +49,6 @@ An effective plan also includes an **incident response plan** to provide a pla
 
 To ensure the new processes and practices become permanent, they must be anchored into the organisation's systems with *supporting policies and procedures*   to become a part of the culture. T his can be achieved by establishing feedback systems and providing ongoing support and training. Celebrating successes, even small ones, is also important to show that the effort is worthwhile and to reinforce the positive behaviours.
 
----
-
-### That Being Said..
+### That Being Said...
 
 In cybersecurity, a risk mitigation plan is only as strong as its execution.  By embracing the principles of change management, organisations can effectively communicate the purpose of their risk mitigation strategies and gain the necessary buy-in from all in the organisation.  Through continuous monitoring and a commitment to communication, a risk mitigation plan transforms from a static document into a dynamic and living defence, ensuring that compliance is not just a requirement but a fundamental part of the organisation's culture.  This proactive approach ensures that your security efforts are effective, sustainable, and truly protect your most valuable assets.

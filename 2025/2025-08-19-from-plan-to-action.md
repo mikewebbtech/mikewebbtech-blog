@@ -14,7 +14,7 @@ series:
   - intro-cyber-security
 ---
 
-*In a previous article, I looked at how risk mitigation plans succeed only when supported by strong communication, change management, and continuous monitoring. With a plan in place, the next stage is implementation. This article focuses on selecting, implement, test, and document cyber security controls so that a strategy moves beyond planning into measurable action.*
+> *In a previous article, I looked at how risk mitigation plans succeed only when supported by strong communication, change management, and continuous monitoring. With a plan in place, the next stage is implementation. This article focuses on selecting, implement, test, and document cyber security controls so that a strategy moves beyond planning into measurable action.*
 
 #  Implementing Cyber Security Controls
 ### From plan to action

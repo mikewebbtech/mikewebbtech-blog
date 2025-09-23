@@ -32,7 +32,7 @@ This is a *principles based* guide that outlines cybersecurity best practices fo
 **Cyber Incident Response Plan** (*CIRP*).  
 The  *CIRP* provides structured guidance for organisations to prepare for, detect, respond to, and recover from cybersecurity incidents. It emphasises coordination, communication, and containment to minimise harm and restore operations. While not mandatory, the CIRP supports compliance with ASD’s broader cybersecurity strategies, including the *Essential Eight* and the *Information Security Manual (ISM)*, and serves as a practical playbook for incident management. 
 
->  [!example] CIRP: [Turn Panic into Preparation](../2025-08-1-intro-to-cirp)
+>  [!example] CIRP: [Turn Panic into Preparation](2025-08-01-intro-to-cirp.md)
 
 **The Australian Cyber Security Centre** (*ACSC*).  
 This is the public-facing arm of the ASD, created to make its, rather extensive, resources accessible to government, business, and individuals. Its portal, [cyber.gov.au](https://www.cyber.gov.au/), provides practical tools, guidance, and alerts on emerging threats. For organisations starting their cybersecurity journey, the Essential Eight serves as a practical first step, while the ISM and CIRP provide the depth and structure to build mature, resilient defences.

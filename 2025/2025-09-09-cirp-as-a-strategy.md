@@ -14,7 +14,7 @@ series:
 ---
 
 > [!INFO]  More then a plan but apart of strategy
-> In an [Intro to CIRP](../2025-08-1-intro-to-cirp), I looked at the core phases of incident management.  It looked at the "what" and "how" of a CIRP.  This article focuses on a CIRP in risk management and control effectiveness, CIRP's should not be viewed as a reactive plan but as a fundamental and measurable component of a proactive risk management strategy
+> In an [Intro to CIRP](2025-08-01-intro-to-cirp.md), I looked at the core phases of incident management.  It looked at the "what" and "how" of a CIRP.  This article focuses on a CIRP in risk management and control effectiveness, CIRP's should not be viewed as a reactive plan but as a fundamental and measurable component of a proactive risk management strategy
 
 # The CIRP as a Risk Mitigation Strategy
 
@@ -33,7 +33,7 @@ These are key performance indicators (**KPIs**) used to evaluate a CIRP.  A shor
 
 #### Continuous Improvement through Review and Revision
 
-The "[Lessons Learned]({{< relref "articles/2025/2025-08-1-intro-to-cirplearned#lessons-learned" >}})" phase is crucial, but it must be integrated into a formal, continuous improvement cycle. This involves more than just a quick debrief. A structured post-incident review should be conducted to evaluate the effectiveness of the response against the established benchmarks. Findings from this review should be used to:
+The "[Lessons Learned]({{< relref "/articles/2025/2025-08-1-intro-to-cirp#lessons-learned" >}})" phase is crucial, but it must be integrated into a formal, continuous improvement cycle. This involves more than just a quick debrief. A structured post-incident review should be conducted to evaluate the effectiveness of the response against the established benchmarks. Findings from this review should be used to:
 - **Update the CIRP:** Revise procedures, roles, and communication plans to reflect what was learned.
 - **Improve Controls:** Feed insights back into the broader cybersecurity program, such as by implementing new preventative controls to close a newly discovered vulnerability.
 - **Conduct Remediation:** Address any deficiencies in training or resources that hindered the response.

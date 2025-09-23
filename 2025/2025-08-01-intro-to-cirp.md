@@ -32,53 +32,42 @@ Organisations without a plan usually respond reactively, in a disorganised and e
 
 In addition to strengthening operational resilience, a CIRP supports compliance with frameworks such as the **Essential Eight** and the **Information Security Manual (ISM)**. More importantly, it provides a practical playbook that bridges strategic planning and operational execution.
 
----
-
 #### Core Phases of a Cyber Incident Response Plan
 
 Response plans typically follow six interconnected phases:
 
 #### Preparation:
-
 - Define the incident types covered (phishing, ransomware, malicious or accidental actions).
 - Establish an Incident Response Team (IRT) with clear roles (with backups to fill in).
 - Set communication and escalation pathways.
 - Conduct training, awareness, and simulation exercises.
 
 #### Identification:
-
 - Detect anomalies through monitoring tools, log analysis, or user reporting.
 - Classify incidents by severity and business impact. (e.g. A single compromised user account may be classified as low severity, whereas ransomware affecting payment systems represents a critical incident.)
 
 #### Containment:
-
 - Apply short-term actions such as isolating affected systems.
 - Implement longer-term strategies, including network segmentation or enhanced monitoring.
 - Containment serves as a barrier, preventing disruption from spreading further into the organisation.
 
 #### Eradication:
-
 - Remove the root cause, including malicious software, compromised credentials, or misconfigurations.
 - Apply relevant security updates and revoke access where necessary.
 
 #### Recovery:
-
 - Restore systems from verified backups.
 - Monitor carefully for reinfection indicators.
 - Restore services in a controlled, staged approach to avoid reintroducing vulnerabilities.
 
 #### Lessons Learned:
-
 (After action debriefs )
-
 - Conduct a structured review to evaluate the effectiveness of the response.
 - Update security policies, technical controls, and awareness programs.
 - Feed findings directly into CIRP revisions to improve readiness for future incidents.
 
 > [!important]
 > These six phases are not only interconnected, these phases are a cyclical process creating a continuous improvement model
-
----
 
 #### Communication and Coordination
 

@@ -13,10 +13,9 @@ series:
   - intro-cyber-security
 ---
 
+# The CIRP as a Risk Mitigation Strategy
 > [!INFO]  More then a plan but apart of strategy
 > In an [Intro to CIRP](2025-08-01-intro-to-cirp.md), I looked at the core phases of incident management.  It looked at the "what" and "how" of a CIRP.  This article focuses on a CIRP in risk management and control effectiveness, CIRP's should not be viewed as a reactive plan but as a fundamental and measurable component of a proactive risk management strategy
-
-# The CIRP as a Risk Mitigation Strategy
 
 When viewed through the lens of risk management, a cyber incident is the reaction to a cyber risk.  Therefore, the Cyber Incident Response Plan (*CIRP*) is a key **[risk mitigation strategy](../2025-08-10-risk-management-and-cyber-controls)**.  By having a defined plan to prepare for, respond to, and recover from an incident, an organisation directly reduces the potential impact of a threat.  While technical controls like the **[Essential Eight](2025-07-13-intro-to-essential-8)** are designed to prevent the likelihood of an incident, the CIRP provides the necessary framework to manage the risk when cyber security controls  fail.  It is a safety net minimising an organisations financial, operational, and reputational damage.
 

@@ -33,7 +33,7 @@ These are key performance indicators (**KPIs**) used to evaluate a CIRP.  A shor
 
 #### Continuous Improvement through Review and Revision
 
-The "[Lessons Learned]({{< relref "/articles/2025/2025-08-1-intro-to-cirp#lessons-learned" >}})" phase is crucial, but it must be integrated into a formal, continuous improvement cycle. This involves more than just a quick debrief. A structured post-incident review should be conducted to evaluate the effectiveness of the response against the established benchmarks. Findings from this review should be used to:
+The "[Lessons Learned]({{< ref "/articles/2025/2025-08-1-intro-to-cirp#lessons-learned" >}})" phase is crucial, but it must be integrated into a formal, continuous improvement cycle. This involves more than just a quick debrief. A structured post-incident review should be conducted to evaluate the effectiveness of the response against the established benchmarks. Findings from this review should be used to:
 - **Update the CIRP:** Revise procedures, roles, and communication plans to reflect what was learned.
 - **Improve Controls:** Feed insights back into the broader cybersecurity program, such as by implementing new preventative controls to close a newly discovered vulnerability.
 - **Conduct Remediation:** Address any deficiencies in training or resources that hindered the response.

@@ -11,7 +11,7 @@ series:
   - my-hugo-site
 ---
 
-### Embracing the Speed and Simplicity Static Site 
+# Embracing the Speed and Simplicity 
 
 As I navigate the ever-evolving landscape of technology, I'm always on the
 lookout for tools that are efficient, powerful, and enjoyable to use. When it
@@ -42,7 +42,7 @@ of database management for my blog.
 
 **Content Separation**:  My content is decoupled from the website framework.   My content is just text files in markdown that I can organise separately to how my site is organised.  I can choose the tools I want for editing.  This opens up many advantages and opportunities I will explore as my site develops.
 
-### My Hugo Workflow (the plan)
+#### My Hugo Workflow (the plan)
 
 My workflow to implementing a Hugo site, hopefully, should be pretty straightforward:
 
@@ -59,7 +59,7 @@ My workflow to implementing a Hugo site, hopefully, should be pretty straightfor
    the contents of the public folder to a web server or use services specifically
    designed for static site hosting like Cloudflare Workers or GitHub Pages.
 
-### Looking Ahead with Hugo
+#### Looking Ahead with Hugo
 
 My journey with Hugo is just beginning, and I'm excited to explore its more
 advanced features, such as shortcodes for embedding dynamic content and data-
@@ -70,5 +70,3 @@ If you're looking for a fast, flexible, and powerful way to build a website,
 especially a blog focused on technical content, I highly recommend giving Hugo a
 try. It's been an invaluable tool in documenting and sharing my own path of
 learning and discovery.
-
----

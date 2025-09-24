@@ -1,6 +1,6 @@
 ---
 date: 2025-07-03T21:09:33+08:00
-draft: true
+draft: false
 title: Cyber Security. Not What I thought
 summary: When introduced to cybersecurity after a career in industrial commissioning, I discovered it is less dramatic then Hollywood movies and more about structured processes, testing, documentation, and discipline. a commissioning and testing background proved surprisingly relevant, making cybersecurity familiar and less intimidating.
 categories:

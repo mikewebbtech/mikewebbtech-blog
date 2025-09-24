@@ -2,7 +2,7 @@
 date: 2025-09-09T00:00:00+08:00
 draft: false
 title: CIRP as a Mitigation Strategy
-summary:
+summary: This article looks CIRP beyond being a reactive plan and implementing it is a measurable and proactive component of a security strategy.  It outlines how a CIRP reduces the impact of a breach and discusses key metrics for continuous improvement.
 tags:
   - notes
   - controls

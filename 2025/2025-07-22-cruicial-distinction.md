@@ -2,7 +2,7 @@
 date: 2025-07-22T09:11:49+08:00
 draft: false
 title: Threats, Vulnerabilities, and Risks
-summary:
+summary: "In cybersecurity, the terms threats, vulnerabilities, and risks are sometimes used incorrectly and interchangeably, but they are distinct concepts.  Understanding their relationship is fundamental to building an effective security program. Think of them as a logical chain: a threat exploits a vulnerability to create a risk."
 tags:
   - notes
   - resource
@@ -15,7 +15,7 @@ series:
 # Threats, Vulnerabilities, and Risks
 ## A Crucial Distinction
 
-In cybersecurity, the terms **threats, vulnerabilities,** and **risks** are often used interchangeably, but they are distinct concepts. Understanding their relationship is fundamental to building an effective security program.  Also important that these concepts have a context, namely they relate to *assets*.  Think of it as a logical chain: a **threat** exploits a **vulnerability** to create a **risk**.
+In cybersecurity, the terms **threats, vulnerabilities,** and **risks** are often used interchangeably, but they are distinct concepts.  Understanding their relationship is fundamental to building an effective security program.   Also important that these concepts have a context, namely they relate to *assets*.  Think of it as a logical chain: a **threat** exploits a **vulnerability** to create a **risk**.
 
 ### What are They?
 

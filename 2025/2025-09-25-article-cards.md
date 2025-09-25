@@ -48,6 +48,7 @@ Ok so what I want is to have :
 This needs the shortcode logic with some html formatting, an inline call to the shortcode in the homepage markdown file, and finally some styling in CSS to finish it off.
 
 **SHORTCODE**
+
 First create the to shortcode.  This will need to live in  **(Hugo root)/layouts/shortcodes** directory. I create **layouts/shortcodes/recent_articles_cards.html** with the folloing snippet.  Notice the go templating language sprinkled amongst standard html along with the classes for styling in CSS.  After learning how to create my own Hugo website, I don't know why kept putting this aside, anyone with a basic level of scripting would follow what is going here. 
 
 ```html
@@ -76,6 +77,7 @@ First create the to shortcode.  This will need to live in  **(Hugo root)/layouts
 ```
 
 **HUGO CONFIGURATION**
+
 Following the [shortcode documentation](https://gohugo.io/content-management/shortcodes):
 > An inline shortcode is a *shortcode* template defined within content.
 > 
@@ -91,6 +93,7 @@ To enable inline shortcode, create a security statement in the Hugo configuratio
 It would be wise to peruse the documentation about the other [security options available](https://gohugo.io/configuration/security/) for configuration.  Also if cutting and pasting the shortcode then editing it for your own use, definitely read up on [safeHTML](https://gohugo.io/functions/safe/html/) that used when calling .Summary, there are pros and cons but I trust my own markdown files.
 
 **CALLING THE CODE**
+
 Shortcodes can be called using two different inline markdown notations , distinguished by their tag delimiters.
 ```html
 Markdown: {{%/* foo */%}} ## Section 1 {{%/* /foo */%}}
@@ -108,6 +111,7 @@ Not to confuse things, this example is for if {{ .Inner }} is used in the short 
 Thats is it.  Simply call the name of the shortcode file, sans .html, in the standard notation format.  
 
 **Super Stylin'**
+
 At this stage Hugo produces a homepage with 4 recent articles where I want them to appear with basic formatting and no styling.  Since I have created classes in the shortcode markup, I just need to create the CSS elements and give it all a style that fits with the page.  This is the fun stuff that I can lost.
 
 After some playing around I have the following elements in my style.css file that I am happy with.
@@ -167,6 +171,7 @@ After some playing around I have the following elements in my style.css file tha
 ```
 
 **YESS!!**
+
 Alright, I am happy with the outcome and once I took the time read the documentation and have a little play, it was not as bad as I though was going to be.  Now I can start looking at solving, and automating, a few other features I would like to implement.
 
 All the source for this and my entire site can be found [here](https://github.com/mikewebbtech/mikewebbtech-hugo) in my git repo.  [Have a look](https://github.com/mikewebbtech/mikewebbtech-hugo/tree/main/layouts/shortcodes). 

@@ -92,16 +92,19 @@ It would be wise to peruse the documentation about the other [security options a
 
 **CALLING THE CODE**
 Shortcodes can be called using two different inline markdown notations , distinguished by their tag delimiters.
-``` 
-Markdown: {{% foo %}} ## Section 1 {{% /foo %}}
-Standard: {{< foo >}} ## Section 1 {{< /foo >}}
+```html
+Markdown: {{%/* foo */%}} ## Section 1 {{%/* /foo */%}}
+Standard: {{</* foo */>}} ## Section 1 {{</* /foo */>}}
 ```
+
 Not to confuse things, this example is for if {{ .Inner }} is used in the short code, that is an action is being performed on `## section 1` in the markdown file.   My shortcode snippet is purely inline use only and I use standard notation, so I have the following simple call in my markdown where I want the "recent article cards" to appear on the homepage
-```markdown
+```html
 ### Latest Articles:
 
-{{< recent_articles_cards >}}
+{{</* recent_articles_cards */>}}
 ```
+
+
 Thats is it.  Simply call the name of the shortcode file, sans .html, in the standard notation format.  
 
 **Super Stylin'**

@@ -2,7 +2,7 @@
 date: 2025-09-25T12:10:33+08:00
 draft: false
 title: Article Cards on Homepage
-summary:
+summary: The article explains how to display the four most recent articles as styled cards on the homepage by extend Hugo functionality using custom shortcodes and calling them in markdown files and CSS.
 tags:
   - blog
   - solution

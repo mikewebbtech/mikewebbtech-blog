@@ -1,5 +1,5 @@
 ---
-date: 2025-09-25T08:57:08+08:00
+date: 2025-09-27T08:57:08+08:00
 draft: false
 title: Hugo Breadcrumbs
 summary: Getting breadcrumbs to work using Hugo shortcodes is doable with some effort and a lot of CSS.  But it might not work as expected.  Let me explain

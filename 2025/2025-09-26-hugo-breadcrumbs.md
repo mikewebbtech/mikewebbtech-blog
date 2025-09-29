@@ -25,13 +25,11 @@ To be honest, this turned into a bit of rabbit hole me.  Beyond researching what
 
 Emboldened with recently working out custom Hugo [shortcodes](https://gohugo.io/content-management/shortcodes/), this approach to creating a separate code snippet and embedding it  was going to be my hammer for this nail.  Hugo has a built in *PAGE* method called [Ancestors](https://gohugo.io/methods/page/ancestors/) that is well documented with an example on how to create breadcrumbs...cool.  Also the Hugo discourse had this [little nugget](https://discourse.gohugo.io/t/generating-breadcrumbs-for-hugo/42059)
 
-
-
 [Mozilla MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation) has  a layout cookbook with a CSS recipe that I used as starting point.  
 
 Schema.org has a [good page](https://schema.org/BreadcrumbList) on breadcrumb structured data that helped me understand the standardised approach that is in many examples.
 
-W3.org has an [ARIA APG]  on element attributes with a good example of HTML source code that helped a lot 
+W3.org has an [ARIA APG](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)  on element attributes with a good example of HTML source code that helped a lot 
 
 **TOOLED UP**
 

@@ -2,7 +2,7 @@
 date: 2025-10-02T00:00:00+08:00
 draft: false
 title: Hugo Pagination
-summary:
+summary: In implementing a list pagination feature for my site, I pivoted from complex custom code to using Hugo's robust built-in template. This saved development time, which was better spent styling the default HTML output with custom CSS.
 tags:
   - blog
   - howto

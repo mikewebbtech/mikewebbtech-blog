@@ -1,5 +1,5 @@
 ---
-date: 2025-09-28T00:00:00+08:00
+date: 2025-04-28T00:00:00+08:00
 draft: false
 title: Creating a Hugo Taxonomy
 summary: I outline the process I used to create a custom Hugo Taxonomy so could have articles ordered into a series.  There are a lot of moving parts in getting this to work.  Hopefully gets the broad strokes explained with the resources I used to help me.

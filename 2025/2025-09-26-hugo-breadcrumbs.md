@@ -160,16 +160,23 @@ This grouping is created by use of [front matter](https://gohugo.io/content-mana
 > Hugo's template methods  (`.Ancestors`, `.Parent`, etc.) can only build a **hierarchical breadcrumb** based on the static file structure (e.g., `/articels/2025/article` always has `/articles/` as its parent).  It knows nothing about the user's click history. 😒
 
 When navigating to an article via the article pathway:
+```
 Expected : HOME > ARTICLES > "TITLE"
-✅ Result : HOME >ARTICLES > "TITLE"
+ ✅ Result : HOME >ARTICLES > "TITLE"
+```
+
 
 When navigating to an article via the categories pathway:
-Expected : HOME > CATEGORIES > CLOUD > "TITLE"
-❌ Result : HOME >ARTICLES > "TITLE"
+```
+ Expected : HOME > CATEGORIES > CLOUD > "TITLE"
+ ❌ Result : HOME >ARTICLES > "TITLE"
+```
 
 When navigating to an article via the tags pathway:
-Expected : HOME >TAGS > GIT > "TITILE"
-❌ Result : HOME >ARTICLES > "TITLE"
+```
+ Expected : HOME >TAGS > GIT > "TITILE"
+ ❌ Result : HOME >ARTICLES > "TITLE"
+```
 
 This is the expected behaviour for Hugo breadcrumbs and it makes sense when I stop to think about it.  For Hugo to meet my expectation and render every combination of pathways to an article as static pages, it would need to create thousands of web pages.  This is unrealistic expectation and would produce a massive website.
 

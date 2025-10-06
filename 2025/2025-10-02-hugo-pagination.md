@@ -1,7 +1,7 @@
 ---
 date: 2025-10-02T00:00:00+08:00
 draft: false
-title: Hugo Pagination
+title: Implementing Hugo Pagination Template
 summary: In implementing a list pagination feature for my site, I pivoted from complex custom code to using Hugo's robust built-in template. This saved development time, which was better spent styling the default HTML output with custom CSS.
 tags:
   - blog
@@ -73,10 +73,42 @@ By pivoting and using Hugo's **`_internal/pagination.html`** template, I immed
 
 Once the functionality was solved, my focus shifted from programming logic to **visual design**. The HTML rendered by the internal template was plain, using standard classes like `.pagination-default` and `.page-item`, which clashed with my site's custom look and feel.
 
+This is HTML that is rendered by the internal pagination.html template:
+```html
+<ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/mikewebb-tech/articles/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/mikewebb-tech/articles/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="/mikewebb-tech/articles/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/mikewebb-tech/articles/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item">
+        <a href="/mikewebb-tech/articles/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/mikewebb-tech/articles/page/12/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+```
 This became the most effective use of my time. Instead of fighting with Go templates, I spent time in my **style.css** file, using specific CSS selectors to map my custom styles onto the default HTML structure.
 
 [assets/css/style.css](https://github.com/mikewebbtech/mikewebbtech-hugo/blob/main/assets/css/style.css):
-```
+```CSS
 /* I mapped my custom class styles to Hugo's generated classes */
 
 /* 

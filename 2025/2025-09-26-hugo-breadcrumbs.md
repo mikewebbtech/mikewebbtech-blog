@@ -1,7 +1,7 @@
 ---
 date: 2025-09-27T08:57:08+08:00
 draft: false
-title: Hugo Breadcrumbs
+title: Hugo Breadcrumbs.  Did I Win?
 summary: Getting breadcrumbs to work using Hugo shortcodes is doable with some effort and a lot of CSS.  But it might not work as expected.  Let me explain
 tags:
   - blog
@@ -10,6 +10,10 @@ categories:
 series:
   - my-hugo-site
 ---
+> [!NOTICE]
+> After implementing breadcrumbs on my site, I have decided not continue using them.  Due to my site design and how Hugo renders pages with breadcrumbs, my experience is the added functionality is confusing and not so value adding.  It was an interesting rabbit hole though.
+
+
 # Navigation Breadcrumbs
 
 Breadcrumbs are a common navigational aid used on websites to help users keep track of their location in the website by providing a *breadcrumb* trail back to the start page.  Like a visual link click history displayed on the webpage or a way directly jump back to any point in the history of links that lead to the user arriving at that webpage, starting with the site root.
@@ -110,7 +114,7 @@ And finally a whole lot of CSS to transform it from a standard looking HTML orde
 
 #### It Works as Expected
 
-But as I intended it work and it makes sense after I spent some effort trying to fix an issue that didn't exist.  The issue was translating my experience with database driven dynamic site design to how a static site generator work...and a little bit of my pathways to an article.
+**But not as I intended**.  This makes sense after I spent some effort trying to fix an issue that didn't exist.  The issue was translating my experience with database driven dynamic site design to how a static site generator work...and a little bit of my pathways to an article.
 
 Hugo ingests content from the /content directory.  all of my article markdown files are in a subdirectory called articles, grouped by year (a structure I intend to exploit for an archive function) and I have created a Hugo site has multiple pathways to each article.  An article  is rendered into the site via:
 - Articles, sorted by most recent, list.

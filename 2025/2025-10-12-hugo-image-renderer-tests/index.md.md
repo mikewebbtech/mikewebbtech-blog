@@ -11,7 +11,8 @@ categories:
 series:
 ---
 
- ![Home Page](homepage.png)
-  ![svg logo](hugo-logo-wide.svg) 
-  ![Small Square Image](network.jpg)
-  ![User Avatar](avatar.png)
+![Home Page](./homepage.png)
+  ![svg logo](./hugo-logo-wide.svg) 
+  ![Small Square Image](./network.jpg)
+  ![User Avatar](./avatar.png)
+![](network.jpg)

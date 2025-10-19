@@ -1,25 +1,19 @@
-name: Submodule Updates
+# .github/workflows/dispatch_update.yml in submodule repo
+name: Dispatch Update Main Repo
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
 jobs:
-  build:
-    name: Submodule update
-    runs–on: ubuntu–latest
-    env:
-      PARENT_REPOSITORY: ‘mikewebbtech/mikewebbtech-hugo’
-      CHECKOUT_BRANCH: ‘main’
-      OWNER: ‘mikewebbtech’
+  dispatch:
+    runs-on: ubuntu-latest
     steps:
-      – name: Checkout Code
-        uses: actions/checkout@v2
-      – name: run action
-        id: run_action
-        uses: releasehub–com/github–action–create–pr–parent–submodule@v1
+      - name: Dispatch update to Main Repo
+        uses: peter-evans/repository-dispatch@v3
         with:
-          github_token: ${{ secrets.RELEASE_HUB_SECRET }}
-          parent_repository: ${{ env.PARENT_REPOSITORY }}
-          checkout_branch: ${{ env.CHECKOUT_BRANCH}}
-          pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
-          owner: ${{ env.OWNER }}
+          token: ${{ GITHUB_TOKEN }}
+          repository: mikewebbtech/mikewebbtech-hugo
+          event-type: submodule_event
+          client-payload: '{"submodule_name": "content/articles", "commit_sha": "${{ github.sha }}"}'

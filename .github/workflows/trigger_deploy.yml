@@ -13,7 +13,7 @@ jobs:
       - name: Dispatch update to Main Repo
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           repository: mikewebbtech/mikewebbtech-hugo
           event-type: submodule_event
           client-payload: '{"submodule_name": "content/articles", "commit_sha": "${{ github.sha }}"}'

@@ -13,12 +13,12 @@ series:
 
 # Testing Hugo Image Render Tricks
 
-<div class="left padded">
+<div class="center padded">
   <img src="homepage.png" alt="Home Page" width="420" loading="lazy">
   <img src="hugo-logo-wide.svg" alt="hugo" width="420" loading="lazy">
 </div>
 
-<div class="right padded">
+<div class="center padded">
   <img src="hugo-logo-wide.svg" alt="hugo" width="420" loading="lazy">
   <img src="homepage.png" alt="Home Page" width="420" loading="lazy">
 </div>

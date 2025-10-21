@@ -13,12 +13,12 @@ series:
 
 # Testing Hugo Image Render Tricks
 
-<div class="center padded">
+<div class="left padded">
   <img src="homepage.png" alt="Home Page" width="420" loading="lazy">
   <img src="hugo-logo-wide.svg" alt="hugo" width="420" loading="lazy">
 </div>
 
-<div class="center padded">
+<div class="right padded">
   <img src="hugo-logo-wide.svg" alt="hugo" width="420" loading="lazy">
   <img src="homepage.png" alt="Home Page" width="420" loading="lazy">
 </div>
@@ -26,7 +26,7 @@ series:
 sLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus. Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit. Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in convallis metus augue a augue. Cras et mi sapien. Phasellus placerat dictum augue nec vehicula. In hac habitasse platea dictumst. Morbi a sapien sed tellus porta rhoncus. Sed porttitor, nibh id tempor tristique, justo sem ultrices odio, non elementum lectus turpis vitae elit.omething
 {class="p-border"}
 
-# Image resized 70%
+## Image resized 70%
 
 ![svg logo](hugo-logo-wide.svg)
 { style="width:70%" .center }

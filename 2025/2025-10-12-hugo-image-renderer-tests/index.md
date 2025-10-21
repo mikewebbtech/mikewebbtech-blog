@@ -29,34 +29,34 @@ sLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
 # Image resized 70%
 
 ![svg logo](hugo-logo-wide.svg)
-{width="70%" class="center"}
+{ style="width:70%" .center }
 
 mLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus. Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit. Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in convallis metus augue a augue. Cras et mi sapien. Phasellus placerat dictum augue nec vehicula. In hac habitasse platea dictumst. Morbi a sapien sed tellus porta rhoncus. Sed porttitor, nibh id tempor tristique, justo sem ultrices odio, non elementum lectus turpis vitae elit.ore
 
 ## Image resized and centered {class="center"}
 
-</br>
+<br>
 
 ![Small Square Image](network.jpg "test")
-{width="600" hight="400" class="center"}
+{width="600" hight="400" .center}
 aLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus.
 
 Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit. Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in convallis metus augue a augue. Cras et mi sapien. Phasellus placerat dictum augue nec vehicula. In hac habitasse platea dictumst. Morbi a sapien sed tellus porta rhoncus. Sed porttitor, nibh id tempor tristique, justo sem ultrices odio, non elementum lectus turpis vitae elit.gain here as well
 
-> ## Image Left {class="two"}
+> ## Image Left { .two }
 
 Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit. Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in convallis metus augue a augue. Cras et mi sapien. Phasellus placerat dictum augue nec vehicula.
 
 ![User Avatar](avatar.png "left")
-{class="left"}
+{  .left }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br></br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus. Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium.</br></br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus. Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium.<br><br>
 Praesent sit amet dapibus velit, vitae fermentum elit. Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in convallis metus augue a augue. Cras et mi sapien. Phasellus placerat dictum augue nec vehicula. In hac habitasse platea dictumst. Morbi a sapien sed tellus porta rhoncus. Sed porttitor, nibh id tempor tristique, justo sem ultrices odio, non elementum lectus turpis vitae elit Morbi a sapien sed tellus porta rhoncus. Sed porttitor, nibh id tempor tristique, justo sem ultrices odio, non elementum lectus turpis vitae elit
 
-> ## A very long Title for Image Right Example {class="right three"}
+> ## A very long Title for Image Right Example { .right .three }
 
 ![User Avatar](avatar.png "right")
-{width="150" class="right" border="2px"}
+{ .right width="150" style="border: 2px"}
 TLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus. Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit.
 
@@ -70,7 +70,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 {{< figure src="vimage.png" alt="hugo logo" imgStyle="height:275px; width:auto;" align="left" wrap="true" >}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus.</br></br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus.<br><br>
 Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit. Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in convallis metus augue a augue. Cras et mi sapien. Phasellus placerat dictum augue nec vehicula. In hac habitasse platea dictumst. Morbi a sapien sed tellus porta rhoncus. Sed porttitor, nibh id tempor tristique, justo sem ultrices odio, non elementum lectus turpis vitae elit.
 
 <!-- {class="p-border"} -->

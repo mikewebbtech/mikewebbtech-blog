@@ -38,6 +38,9 @@ Initially I thought I had to approach this with shortcodes but reading through t
   - For **internal**: output a normal link.
 - The hook doesn’t change your content; it **wraps Markdown output** consistently across the site.
 
+> [!NOTE]
+>  Setting `target="_blank"` on `<a>`, `<area>` and `<form>` elements implicitly provides the same `rel` behavior as setting `rel="noopener"` which does not set `window.opener`. [MDN noopener](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener)
+
 # The render hook
 Create: `/layouts/_default/_markup/render-link.html`
 

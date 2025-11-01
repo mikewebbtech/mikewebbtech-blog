@@ -132,7 +132,7 @@ Nullam condimentum, eros sit amet gravida sodales, nunc ante lacinia nibh, in co
 
 CODE:
 ```go
-{{< figure src="hugo-logo-wide.svg" alt="hugo logo" width="150" align="right" wrap="true" caption="[Hugo the fast SSG](https://gohugo.io)">}}
+{{</* figure src="hugo-logo-wide.svg" alt="hugo logo" width="150" align="right" wrap="true" caption="[Hugo the fast SSG](https://gohugo.io)" */>}}
 ```
 
 
@@ -142,7 +142,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 CODE:
 ```go
-{{< figure src="vimage.png" alt="hugo logo" imgStyle="height:275px; width:auto;" align="left" wrap="true" >}}
+{{</* figure src="vimage.png" alt="hugo logo" imgStyle="height:275px; width:auto;" align="left" wrap="true" */>}}
 ```
 
 

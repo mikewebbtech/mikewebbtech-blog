@@ -122,7 +122,6 @@ CODE:
 
 ![User Avatar](avatar.png "right")
 { .right width="150" style="border:2px solid #999" }
-
 TLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Integer facilisis mauris non nunc posuere, at pulvinar arcu ultricies. Vivamus maximus, metus non gravida aliquet, nunc libero viverra nisi, a commodo urna nibh at risus. Curabitur faucibus, enim a iaculis condimentum, tellus quam luctus risus, sed feugiat risus arcu vitae magna. Suspendisse potenti. Aenean ac sem at ipsum iaculis pretium. Praesent sit amet dapibus velit, vitae fermentum elit.
 

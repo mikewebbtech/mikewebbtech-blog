@@ -49,9 +49,9 @@ My actions workflow is here [mikewebbtech/mikewebbtech-hugo/.github/workflows/si
 
 I highly recommend reading the following links to better understand GitHub Actions and Pages:
 
-[deploy-pages 🚀  repo](https://github.com/actions/deploy-pages)
-[Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-[Choosing and using a workflow template](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates#choosing-and-using-a-workflow-template)](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates)
+- [deploy-pages 🚀  repo](https://github.com/actions/deploy-pages)
+- [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [Choosing and using a workflow template](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates#choosing-and-using-a-workflow-template)](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates)
 
 ---
 
@@ -107,6 +107,28 @@ Here’s the workflow file (simplified description, not the full YAML):
       - deploys it to GitHub Pages
 
 ---
+
+## Grab a workflow from Marketplace
+I mean, why reinvent the the wheel when the GitHub team have already created a **Pages build and deploy** action.  A perfect starting point.  Github have gone out of their way to make it easy.
+
+1 - In the my Hugo repo, go to actions and create a new workflow
+![create a new workflow](1-new-workflow.png)
+
+
+2 - Search for Hugo
+![search Hugo](2-enter-hugo.png)
+{.center}
+
+3 - select "Configure" on the official Github Actions Hugo workflow
+![configure hugo workflow](3-hit-configure.png)
+{.center}
+
+4 - Check the location and name of the file (the yaml) and commit it the repo
+![commit to repo](4-commit.png)
+{.center}
+
+> [!IDEA] Remember
+> The remote repo changes needs to be pulled to local `git pull` as it needs to be edited for submodule triggers and syncing...and updating hugo version so go modules work
 
 ## Let’s go through it section by section.
 
@@ -235,11 +257,14 @@ All of my content lives in a separate repo and is referenced as a submodule, thi
 ```
 
 If `.gitmodules` exists, this step:
-
 - syncs submodule configuration, and
 - updates all submodules to the **latest commit on the tracked remote branch**.
 
 This is useful as I treat submodules like “live dependencies” (e.g.  separate content repo that I want to track at head) rather than pinning them to a specific commit. This fits how I’m managing my content as an external repos.
+
+> [!NOTE]
+> According to the [Using submodules with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-submodules-with-github-pages)*.  If the repository for your GitHub Pages site contains submodules, their contents will automatically be pulled in when your site is built.*. 
+> I liked the idea of explicitly syncing submodules in my workflow.
 
 ### Configure GitHub Pages
 

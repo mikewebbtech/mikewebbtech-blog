@@ -175,7 +175,8 @@ Two important things here:
 1. **Minimal permissions**
     - `contents: read` – the workflow only needs to read the repo content.
     - `pages: write` – needed to publish to GitHub Pages.
-    - `id-token: write` – used internally for OIDC authentication in the Pages deployment process.
+    - `id-token: write` – used internally for [OID](https://docs.github.com/en/actions/concepts/security/openid-connect)
+    authentication in the Pages deployment process.
     
 This avoids giving the workflow full admin rights in the repo. Least privilege is always a good habit.
     

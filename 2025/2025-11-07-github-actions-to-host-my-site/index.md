@@ -130,7 +130,8 @@ I mean, why reinvent the the wheel when the GitHub team have already created a *
 ![commit to repo](4-commit.png)
 {.center}
 
-
+<br>
+<br>
 > [!IDEA] Remember
 > The remote repo changes needs to be pulled to local `git pull` as it needs to be edited for submodule triggers and syncing...and updating hugo version so go modules work
 

@@ -51,7 +51,7 @@ I highly recommend reading the following links to better understand GitHub Actio
 
 - [deploy-pages 🚀  repo](https://github.com/actions/deploy-pages)
 - [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-- [Choosing and using a workflow template](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates#choosing-and-using-a-workflow-template)](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates)
+- [Choosing and using a workflow template](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates#choosing-and-using-a-workflow-template)
 
 ---
 
@@ -84,7 +84,6 @@ The new approach:
 
 No more local build steps. No more “oh yeah, I still need to deploy this".  Just commit the main branch as apart of my version control workflow. 🪄 magic. 
 
-
 ---
 
 ## High-level view of the workflow
@@ -112,18 +111,21 @@ Here’s the workflow file (simplified description, not the full YAML):
 I mean, why reinvent the the wheel when the GitHub team have already created a **Pages build and deploy** action.  A perfect starting point.  Github have gone out of their way to make it easy.
 
 1 - In the my Hugo repo, go to actions and create a new workflow
+
 ![create a new workflow](1-new-workflow.png)
 
-
 2 - Search for Hugo
+
 ![search Hugo](2-enter-hugo.png)
 {.center}
 
 3 - select "Configure" on the official Github Actions Hugo workflow
+
 ![configure hugo workflow](3-hit-configure.png)
 {.center}
 
 4 - Check the location and name of the file (the yaml) and commit it the repo
+
 ![commit to repo](4-commit.png)
 {.center}
 

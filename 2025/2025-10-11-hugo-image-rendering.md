@@ -25,7 +25,7 @@ Hugo gives you a few different ways to work with images:
 
 In this post I’ll walk through the basics of how I’m using images in my Hugo site, and the trade-offs between each option.
 
-> ### Basic mental model: where do images live?
+> ## Basic mental model: where do images live?
 > {.one}
 
 Hugo doesn’t really care _what_ the file is – image, CSS, PDF – it mainly cares _where_ it lives:
@@ -39,7 +39,7 @@ For images, the two common patterns are:
 
 I use both, depending on the type of image.
 
-> ### Option 1: images in the `static/` folder
+> ## Option 1: images in the `static/` folder
 > {.two}
 
 This is the simplest option and works like a traditional web server:
@@ -78,7 +78,7 @@ or in HTML:
 - Easy for the `static/` folder to become messy over time.
 - Harder to move a post (its images are not bundled with the content).
 
-> ### Option 2: page bundles (images next to the content)
+> ## Option 2: page bundles (images next to the content)
 > {.three}
 
 For blog posts, I usually prefer **page bundles**. The idea is:
@@ -122,7 +122,7 @@ Hugo will resolve those paths when building the site.
 - You need to stick to the bundle pattern (e.g. using `index.md`).
 - Paths change if you move things around outside Hugo’s expectations.
 
-> ### Using Hugo’s built-in `figure` shortcode
+> ## Using Hugo’s built-in `figure` shortcode
 > {.four}
 
 Hugo comes with a `figure` shortcode that can wrap an image with a caption and some extra attributes.
@@ -142,7 +142,7 @@ I like this for images that need:
 - attribution,
 - or extra semantics beyond a standard Markdown image.
 
-> ### A simple custom image shortcode
+> ## A simple custom image shortcode
 > {.five}
 
 If you want consistent classes, lazy-loading, or a wrapper div, you can create your own shortcode.
@@ -173,7 +173,7 @@ This gives you:
 - built-in `loading="lazy"`,
 - a single place to tweak styling later.
 
-> ### Basic image processing with page resources 
+> ## Basic image processing with page resources 
 > {.one}
 
 Hugo can do more than just “serve” an image. With page bundles, images become **resources**. I am transform and optimising them in templates.
@@ -193,7 +193,7 @@ This:
 
 I treat this as “phase two”: first get basic images working, then come back and add processing where it makes sense (hero banners, thumbnails, etc.).
 
-> ### Good practices I try to follow
+> ## Good practices I try to follow
 > {.two}
 
 A few practical habits that make life easier in the long run.
@@ -237,7 +237,7 @@ High-res screenshots and photos add up fast.
 - resize or compress images before committing if possible,
 - use formats like WebP for some images if your theme/workflow supports it.
 
-> ### How I’m using images right now
+> ## How I’m using images right now
 > {.three}
 
 On my site, my current pattern is:

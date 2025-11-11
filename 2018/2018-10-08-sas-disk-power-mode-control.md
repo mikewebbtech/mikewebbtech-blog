@@ -28,9 +28,9 @@ These are SCSI drives, the usual hdparm tool command don't work.
 
 **Information Gathering**
 
-Let's get some basics
+**Let's get some basics**
 
-```
+```bash
 # smartctl -i /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
@@ -62,9 +62,9 @@ Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 SMART Health Status: OK`
 ```
 
-And a bit more information including the temperature
+**And a bit more information including the temperature**
 
-```
+```bash
 # smartctl -A /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
@@ -85,9 +85,9 @@ Blocks sent to initiator = 1063292319563776
 
 ```
 
-Examine selftest history
+**Examine selftest history**
 
-```
+```bash
 # smartctl -l selftest /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
@@ -100,10 +100,9 @@ Description number (hours)
 # 2 Background long Completed - 45 - [- - -]
 
 Long (extended) Self Test duration: 6 seconds [0.1 minutes]
-
 ```
 
-Start a short forground selftest and varify results
+**Start a short foreground selftest and verify results**
 
 ```
 # smartctl -C -t short /dev/sda
@@ -123,12 +122,11 @@ Description number (hours)
 # 3 Background long Completed - 45 - [- - -]
 
 Short Foreground Self Test Successful
-
 ```
 
-Look at the error log
+**Look at the error log**
 
-```
+```bash
 # smartctl -l error /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
@@ -143,12 +141,11 @@ write: 0 0 0 0 7138 15571.768 0
 verify: 0 0 0 0 15629 0.000 0
 
 Non-medium error count: 0
-
 ```
 
-Examine smarttools extended output with background media scan (BMS) is active
+**Examine smarttools extended output with background media scan (BMS) is active**
 
-```
+```bash
 # smartctl -x /dev/sda
 <--snip-->
 Background scan results log
@@ -157,46 +154,46 @@ Accumulated power on time, hours:minutes 763:09 [45786 minutes]
 Number of background scans performed: 8, scan progress: 66.08%
 Number of background medium scans performed: 8
 <--snip-->
-
 ```
 
 Background scanning is active, this wont affect disk performance as "The BMS process works at idle time, when the disk received no commands" i.e. the disk wont spin down as usual when it is idle.
 
-*(Please read the sdparm man page before blindly doing a copy paste and to get a better understanding of the options and switches. They may not be compatible with your drive.)*
+> [!note]
+> (Please read the sdparm man page before blindly doing a copy paste and to get a better understanding of the options and switches. They may not be compatible with your drive.)*
 
-Let's urn off BMS on this SAS drive
+**Let's urn off BMS on this SAS drive**
 
-```
+```bash
 # sdparm --clear=EN_BMS --save /dev/sda
 
 ```
 
-Query the disks abilty and value for standby
+**Query the disks abilty and value for standby**
 
-```
+```bash
 # sdparm --flexible -6 -p po -l /dev/sda | grep -e SCT
 SCT 0 [cha: y, def: 0, sav: 0] Standby_z condition timer (100 ms)
 
 ```
 
-No counters defined (SCT 0 = not countdown time till standby)
+**No counters defined (SCT 0 = not countdown time till standby)**
 
-```
+```bash
 # sdparm --flexible -6 -p po -l /dev/sda | grep -e "STANDBY "
 STANDBY 0 [cha: y, def: 0, sav: 0] Standby_z timer enable
 
 ```
 
-Standby not enabled (STANDBY 0)
+### Standby not enabled (STANDBY 0)
 
 *what is Standby (standby\_Z)*
-*• Heads are unloaded to drive ramp.*
-*• Drive motor is spun down.*
-*• Drive still responds to non-media access host commands*
+- Heads are unloaded to drive ramp.
+- Drive motor is spun down.
+- Drive still responds to non-media access host commands
 
-Let's enable it
+**Let's enable it**
 
-```
+```bash
 # sdparm --flexible -6 -v -S -p po --set=STANDBY=1 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x3 start_bit=0 num_bits=1 val=1 acronym: STANDBY
@@ -205,20 +202,18 @@ pdt=-1 start_byte=0x3 start_bit=0 num_bits=1 val=1 acronym: STANDBY
 mode sense (6) cdb: 1a 00 1a 00 04 00
 mode sense (6) cdb: 1a 00 1a 00 34 00
 mode select (6) cdb: 15 11 00 00 34 00
-
 ```
 
-Verify
+**Important to verify it**
 
-```
+```bash
 # sdparm --flexible -6 -p po -l /dev/sda |grep -e "STANDBY "
 STANDBY 1 [cha: y, def: 0, sav: 1] Standby_z timer enable
-
 ```
 
-Set the SCT (Standby\_z condition timer in units of 100ms so 9000=15 minutes)
+**Set the SCT (Standby\_z condition timer in units of 100ms so 9000=15 minutes)**
 
-```
+```bash
 # sdparm --flexible -6 -v -S -p po --set=SCT=9000 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x8 start_bit=7 num_bits=32 val=9000 acronym: SCT
@@ -227,19 +222,18 @@ pdt=-1 start_byte=0x8 start_bit=7 num_bits=32 val=9000 acronym: SCT
 mode sense (6) cdb: 1a 00 1a 00 04 00
 mode sense (6) cdb: 1a 00 1a 00 34 00
 mode select (6) cdb: 15 11 00 00 34 00
-
 ```
 
-Verify
+**Remember: Verify**
 
-```
+```bash
 # sdparm --flexible -6 -p po -l /dev/sda |grep -e SCT
 SCT 9000 [cha: y, def: 0, sav:9000] Standby_z condition timer (100 ms)
 ```
 
-View all contents of the Power condition [po] mode page
+**Let's view all contents of the Power condition [po] mode page**
 
-```
+```bash
 # sdparm --flexible -6 -p po -l /dev/sda
 /dev/sdb: HGST HUS726040ALS214 MS00
 Direct access device specific parameters: WP=0 DPOFUA=1
@@ -260,14 +254,16 @@ CCF_STAND 0 [cha: y, def: 0, sav: 0] check condition on transition from standby
 CCF_STOPP 0 [cha: y, def: 0, sav: 0] check condition on transition from stopped
 ```
 
-NOTE: IBCT (Idle\_b condition timer) has has a condition of 6000 (10 minutes) but is not enable (IDLE\_B 0) it.   Let's enable and reduce it down to 5 minutes as this is a disk used in a zpool for archives and backups and occasional media file access
+> [!NOTE]
+>  IBCT (Idle\_b condition timer) has has a condition of 6000 (10 minutes) but is not enable (IDLE\_B 0) it.   Let's enable and reduce it down to 5 minutes as this is a disk used in a zpool for archives and backups and occasional media file access
 
-*What is Idle\_B*
-*• Disables most of the servo system, reduces processor and channel power consumption*
-*• Heads are unloaded to drive ramp.*
-*• Disks rotating at full speed (7200 RPM)*
+**What is Idle\_B**:
+- Disables most of the servo system, reduces processor and channel power consumption
+- Heads are unloaded to drive ramp.
+- Disks rotating at full speed (7200 RPM)
 
-```
+**Enable the condition timer**
+```bash
 # sdparm --flexible -6 -v -S -p po --set=IDLE_B=1 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x3 start_bit=2 num_bits=1 val=1 acronym: IDLE_B
@@ -278,8 +274,8 @@ mode sense (6) cdb: 1a 00 1a 00 34 00
 mode select (6) cdb: 15 11 00 00 34 00
 ```
 
-
-```
+**Set the condition timer to 5 minutes**
+```bash
 # sdparm --flexible -6 -v -S -p po --set=ICT=3000 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x4 start_bit=7 num_bits=32 val=3000 acronym: ICT
@@ -290,8 +286,7 @@ mode sense (6) cdb: 1a 00 1a 00 34 00
 mode select (6) cdb: 15 11 00 00 34 00
 ```
 
-Now verify the changes
-
+**Now verify the changes**
 ```
 # sdparm --flexible -6 -p po -l /dev/sda |grep -e "ICT\|IDLE_C "
 IDLE_C 1 [cha: y, def: 0, sav: 1] Idle_c timer enable

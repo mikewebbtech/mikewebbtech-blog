@@ -1,7 +1,7 @@
 ---
 date: 2025-10-09T00:00:00+08:00
 draft: false
-title: Smart external links in Hugo with a render hook
+title: links icons with Hugo render hook
 summary: How I made external links open in a new tab, added security attributes and appended an icon, without touching Markdown content
 tags:
   - blog
@@ -11,13 +11,14 @@ categories:
 series:
   - my-hugo-site
 ---
+# Adding icons to external links
 I wanted two things from links on my Hugo site:
 1) **UX:** External links should open in a new tab and show a small icon so readers know they’re leaving.  
 2) **Security/Accessibility:** Add `rel="external nofollow noreferrer` and an ARIA cue (`“aria-label="{{ $text }} (opens in a new tab)”`).
 
 Doing this **inside Markdown** is messy.  Doing it **site wide** with a Hugo **render hook** is cleaner, is adopted by existing function rendering and future proof.
 
-# Options to solution
+## Options to solution
 Initially I thought I had to approach this with shortcodes but reading through the documentation to implement another feature for admonitions and code blocks, I learnt that Hugo includes an embedded link render hook to resolve Markdown link destinations. You can adjust its behaviour in the site configuration  that is [documented in detail](https://gohugo.io/render-hooks/links/) and has a code example to get me started
 
 ```go-html-template
@@ -31,7 +32,7 @@ Initially I thought I had to approach this with shortcodes but reading through t
 {{- /* chomp trailing newline */ -}}
 ```
 
-# My approach
+## My approach
 - Hugo lets you override how Markdown links render via `/layouts/_default/_markup/render-link.html`.
 - I detect **external vs internal** (respecting my own `baseURL`), treat the handling of other uri types (`mailto:`) safely to not add my render hook:
   - For **external**: add `target="_blank"`, `rel="external nofollow noreferrer`, an ARIA label, and a small external-link **inline image** (I am using font awsome icons for this).
@@ -41,7 +42,7 @@ Initially I thought I had to approach this with shortcodes but reading through t
 > [!NOTE]
 >  Setting `target="_blank"` on `<a>`, `<area>` and `<form>` elements implicitly provides the same `rel` behavior as setting `rel="noopener"` which does not set `window.opener`. [MDN noopener](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener)
 
-# The render hook
+## The render hook
 Create: `/layouts/_default/_markup/render-link.html`
 
 ```go-html-template
@@ -74,7 +75,7 @@ Create: `/layouts/_default/_markup/render-link.html`
 - **Internal** = relative links (`/articles/…`, `articles/…`) or absolute links that start with your `baseURL`.
 - `mailto:` are **not** forced new-tab and don’t get the icon (keeps assistive tech expectations).
 
-# Minimal CSS
+## Minimal CSS
 In the render-link template I applied some inline styling to the to appended external link icon to give it that *familiar look*
 
 ```html
@@ -83,7 +84,7 @@ In the render-link template I applied some inline styling to the to appended ext
 </span>
 ```
 
-# Config tweaks
+## Config tweaks
 
 You **don’t** need special settings configured in hugo.toml to use a render hook.  Since I am  sanitising the HTML, keeping the icon inline as above should keep things  safe.  But I if  extending Markdown attributes like `{.btn}`, ensuring I have following goldmark attribute set gives me future proofing if I need it:
 
@@ -93,7 +94,7 @@ You **don’t** need special settings configured in hugo.toml to use a render 
     title = true
 ```
 
-# A quick test matrix
+## A quick test matrix
 
 Paste these in a draft and preview:
 
@@ -107,7 +108,7 @@ Paste these in a draft and preview:
 
 **Expected Result:** only “Hugo docs” should open in a new tab and shows the icon.
 
-# Dam edge cases and gotchas
+## Dam edge cases and gotchas
 
 - **Custom domains / GitHub Pages paths:** The hook compares against `site.BaseURL`.  I need Make sure the paths are correct otherwise Hugo may misclassify links.
     
@@ -117,8 +118,8 @@ Paste these in a draft and preview:
 
 - **Accessibility:** The ARIA label announces the new-tab behaviour; don’t also add “(external)” in the visible text unless your style guide requires it.
 
-# Why a render hook (and not JS)?
+## Why a render hook (and not JS)?
 
 - **Deterministic:** Works at build time; no FOUC or client-side mutation.  FOUC - *Flash Of Unstyled Content*,   It’s when a page briefly shows raw HTML without your CSS applied, then “snaps” to the styled version once the stylesheet loads. I deal with this in the header loading  the style sheet with `{{ $css := resources.Get "css/style.css" | minify }}`.
-- **Consistancy:** Every Markdown link gets the same treatment, perfect for consistency avoiding human error.
+- **Consistency:** Every Markdown link gets the same treatment, perfect for consistency avoiding human error.
 - **Fast:** No runtime overhead, no brittle DOM rewrites.

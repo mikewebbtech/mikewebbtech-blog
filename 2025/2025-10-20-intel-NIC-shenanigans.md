@@ -12,9 +12,9 @@ categories:
   - networking
 series:
 ---
-# Intel x520 fix
+# Intel x520 sfp+ fix
 
-Not sure if this a linux issue, a proxmox issue or Intel being funny with none intel sfp+ transceiver  support with their NICs.
+Not sure if this a linux issue, a Proxmox issue or Intel being funny with none intel sfp+ transceiver  support with their NICs.
 
 I have successfully used brocade and HP sfp+ transceiver modules with onboard X710 10Gbe but ran into issues when trying to install and configure networking on proxmox with an Intel x520 PCI NIC.
 
@@ -25,7 +25,6 @@ ethtool --test failed.  So of to look at the logs, which should have been the st
 ```bash
 ixgbe 0000:02:00.0: failed to load because an unsupported SFP+ or QSFP module type was detected.
 ixgbe 0000:02:00.0: Reload the driver after installing a supported module.
-
 ```
 I've come across such chicanery before with some switch vendors not supporting third party sfp_ and qfp modules (total BS from an end user perspective but makes sense from a support perspective).
 
@@ -33,7 +32,6 @@ To test this, in linux, we inject some magic into the drivers.
 ```bash
 root@server:~# rmmod ixgbe
 root@server:~# modprobe ixge allow_unsupported_sfp=1
-
 ```
 Back to the logs
 ```bash

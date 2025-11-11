@@ -130,7 +130,7 @@ Hugo comes with a `figure` shortcode that can wrap an image with a caption and
 Example:
 
 ```markdown
-{{< /*figure src="diagram-01.png" alt="Overview diagram" caption="High-level flow of the pipeline." */>}}
+{{</* figure src="diagram-01.png" alt="Overview diagram" caption="High-level flow of the pipeline." */>}}
 ```
 
 This assumes the image is either:

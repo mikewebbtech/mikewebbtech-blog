@@ -1,6 +1,6 @@
 ---
 date: 2025-10-29T00:00:00+08:00
-draft: true
+draft: false 
 title: Configuring GitHub Pages for free Hugo host my Hugo hostin
 summary: How I use GitHub Pages as the free hosting solution for my Hugo site. Version controlled, highly available, and HTTPS by default.
 tags:

@@ -33,7 +33,7 @@ This article walks through the workflow file I’m using, what problems it solve
 
 ### Pre-requisites
 
-Have already configured GitHub pages for the repo.  See my article on [configuring GitHub Pages](../2025-10-29-github-pages-setup.md) for static site hosting
+Have already configured GitHub pages for the repo.  See my article on [configuring GitHub Pages](../2025-10-29-github-pages-setup) for static site hosting
 
 GitHub has this well documented. Here is the official Pages page [to get you started](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 

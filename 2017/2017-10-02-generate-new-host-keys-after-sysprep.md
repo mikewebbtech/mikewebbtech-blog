@@ -22,11 +22,11 @@ Fortunately this easy fix.
 
 On Ubuntu, to regenerate new ssh host keys with this simple command
 ```
-$ sudo dpkg-reconfigure openssh-server`
+$ sudo dpkg-reconfigure openssh-server
 ```
 if successful yoou will get something like
 
-```
+```bash
 Creating SSH2 RSA key; this may take some time ...
 2048 SHA256:ToJkgjGdbcFX4wCsiM0IGjGkdSCex3m/ycnsRo0qEA root@UbuntuLTS-clone (RSA)
 Creating SSH2 DSA key; this may take some time ...
@@ -38,7 +38,7 @@ Creating SSH2 ED25519 key; this may take some time ...
 ```
 
 Restart your ssh server
-```
+```bash
 $ sudo systemctl restart sshd.service
 ```
 ssh into the VM.  Enjoy terminal goodness

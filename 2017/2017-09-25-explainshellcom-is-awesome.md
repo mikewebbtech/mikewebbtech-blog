@@ -23,5 +23,5 @@ find ~/ -name 'core*' -exec rm {} \;
 But bombs out at things like:
 
 ```
-for i in {1..12}; do for j in $(seq 1 $i); do echo -ne $iÃ—$j=$((i*j))\\t;done; echo;done
+for i in {1..12}; do for j in $(seq 1 $i); do echo -ne $i\x$j=$((i*j))\\t;done; echo;done | column -t
 ```

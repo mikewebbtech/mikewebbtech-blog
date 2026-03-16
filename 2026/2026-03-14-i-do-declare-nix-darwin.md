@@ -14,6 +14,7 @@ series:
 ---
 
 # I declare Nix-Darwin for the laptop win
+{.center}
 ![nix-darwin](https://github.com/user-attachments/assets/0e1a77ac-6739-4153-bd24-abd3a5e143f5)
 { .center width="200" }
 
@@ -415,3 +416,17 @@ The benefits to me are significant:
 - easy migration to new machines
 - instant and clean rollback
 For developers, engineers, or anyone who value reproducibility, Nix-Darwin turns macOS systems  into something much closer to *[infrastructure-as-code](https://en.wikipedia.org/wiki/Infrastructure_as_code)* for your laptop.
+
+---
+### Resources that I followed
+Apart from the obvious developer sites as the source of truth for Nix and Nix-Darwin. I found the following sites and videos very helpful
+
+[Nix Darwin Official Page](https://nix-darwin.org/)
+
+[Nix..the package manager for NixOS](https://nixos.org)
+
+{{< youtube k8WaLC8GLCs >}}
+
+{{< youtube iU7B76NTr2I >}}
+
+{{< youtube qUmZtC6ts0M >}}

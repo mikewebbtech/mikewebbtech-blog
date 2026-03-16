@@ -14,7 +14,7 @@ series:
 ---
 
 # I declare Nix-Darwin for the laptop win
-![nix-darwin](https://private-user-images.githubusercontent.com/18535642/428120998-0e1a77ac-6739-4153-bd24-abd3a5e143f5.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzM2MjY4OTIsIm5iZiI6MTc3MzYyNjU5MiwicGF0aCI6Ii8xODUzNTY0Mi80MjgxMjA5OTgtMGUxYTc3YWMtNjczOS00MTUzLWJkMjQtYWJkM2E1ZTE0M2Y1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzE2VDAyMDMxMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM5OWRlNDk4YWIxYjA0NTYxY2I4Y2NiOWU1Y2EwZjNlYjVkNTA2OTEzMWM1NTRhNTVmMjllMjE0ZjM3MjhmMzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-bEkmVpOG0mqdICVQ8Tx4odc0UH3AVHGtfSPCfvX6-I)
+![nix-darwin](https://github.com/user-attachments/assets/0e1a77ac-6739-4153-bd24-abd3a5e143f5)
 { .center width="200" }
 
 For most Mac users the standard way to install developer  and unix tools is **[Homebrew](https://brew.sh)** or  **[MacPorts](https://www.macports.org)**.  I used MacPorts or years and it works well but had its pain points so switch to Homebrew as it had a large following, but eventually I ran into the same familiar problem:

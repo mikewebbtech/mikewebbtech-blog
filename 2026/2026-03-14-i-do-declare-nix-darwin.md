@@ -419,14 +419,17 @@ For developers, engineers, or anyone who value reproducibility, Nix-Darwin turns
 
 ---
 ### Resources that I followed
-Apart from the obvious developer sites as the source of truth for Nix and Nix-Darwin. I found the following sites and videos very helpful
+Apart from the obvious project sites as the source of truth for Nix and Nix-Darwin. I found the following sites and videos very helpful
 
 [Nix Darwin Official Page](https://nix-darwin.org/)
 
 [Nix..the package manager for NixOS](https://nixos.org)
 
+I found Michael's video a good, recent, walkthrough  and the problem he was trying to solve shared a lot similarities with mine, and I guess other MacPorts and Homebrew users as well.  He goes through using the Determinate Systems installer for better macOS upgrade resilience and and  steps for handling unfree software through specific "predicates".
 {{< youtube k8WaLC8GLCs >}}
 
+Omer provides shows his process for converting manual macOS settings into a declarative Nix flake.  He goes through how to automate system preferences like Touch ID for `sudo`, integrating Homebrew for GUI app management, and how to navigate the extensive nix-darwin documentation to build a portable, "code-driven machine configuration".  His other videos are good watch as well. 
 {{< youtube iU7B76NTr2I >}}
 
+Alex from KTZ Systems explains the mechanics of the Nix store and symlink architecture.  He focuses on building a unified, cross-platform workflow that he uses for managing macOS and Linux systems from a single flake, using modular logic to apply custom settings like dock layouts to specific machines. His guid on using and the Mac App Store and solutions for common hurdles like Full Disk Access and Rosetta installation was very helpfull.  His other videos, mainly on tailscale are also a good watch.
 {{< youtube qUmZtC6ts0M >}}

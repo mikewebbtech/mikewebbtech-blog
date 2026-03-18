@@ -2,7 +2,7 @@
 date: 2026-03-18T00:00:00+08:00
 draft: false
 title: Using Spec Driven Devlopment for a Quick Feature with AI
-summary: After having my feed bombared with the power of AI-assisted coding using spec driven devolpment and this being a more rational approach to outcome success vs the slop of "vide codig". I thought I would examin its use this to to implement a specific Hugo feature, from requirements to styled solution, in minutes.
+summary: After having my feed bombared with the power of AI-assisted coding using spec driven devolpment and this being a more rational approach to outcome success vs the slop of "vide coding". I thought I would examin its use to implement a specific Hugo feature I wanted to create for my site, from requirements to styled solution, in minutes.
 tags:
   - howto
   - AI

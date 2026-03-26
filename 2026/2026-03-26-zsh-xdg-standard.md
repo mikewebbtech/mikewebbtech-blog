@@ -21,6 +21,7 @@ Setting this variable uses the shell's native initialisation to change its own "
 To understand why ZDOTDIR works, you have to look at the order in which Zsh loads files. When you open a terminal, Zsh searches for files in this specific order:
 1. /etc/zshenv: System-wide environment settings.
 2. $HOME/.zshenv: Your personal environment settings. This is the critical step.
+
 Zsh always looks for .zshenv in the user home directory first. Because of this, .zshenv acts as a "bootstrap", or redirector. If you put 
 `export ZDOTDIR=$HOME/.config/zsh` inside that file, Zsh immediately updates its internal pointer for the next initialisation stage.
 

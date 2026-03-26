@@ -1,8 +1,8 @@
 ---
 date: 2026-03-26T00:00:00+08:00
 draft: false
-title: a modular zsh environment
-summary:
+title: A Modular Zsh Environment
+summary: I rebuilt my Zsh configuration into a clean, modular system after struggling with my old  messy, brittle setup that slowed down my workflow.  By organising configs, replacing heavy weigth frameworks with  lightweight functions, and treating my shell like a structured project, I made it easier to maintain, extend, and debug.
 tags:
   - opensource
   - shell

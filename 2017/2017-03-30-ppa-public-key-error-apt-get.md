@@ -5,6 +5,7 @@ summary: Though, every now and then I hit a snag when installing a new package, 
 draft: false
 categories:
   - home-lab
+  - toolage
 tags:
   - ubuntu
   - linux

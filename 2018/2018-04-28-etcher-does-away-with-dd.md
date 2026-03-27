@@ -5,7 +5,7 @@ summary: dd has being my go to tool for "everything-imges-and-iso", especially e
 draft: false
 categories:
   - home-lab
-  - virtualisation
+  - toolage
 tags:
   - linux
   - mac

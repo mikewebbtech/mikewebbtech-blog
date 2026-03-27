@@ -4,7 +4,7 @@ date: 2018-10-24T16:59:13
 summary: Upgrading MacOS from High Sierra to Mojave introduces some new security requirements that cause issues with some applications. The fix for apps created in electron is simple onse you know how.
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
   - mac
   - solution

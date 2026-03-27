@@ -4,10 +4,8 @@ date: 2017-08-11T13:11:32
 summary: Notes on how to get any application that supports WebDAV or CardDAV to access apple iCloud resources. Following on from previous posts about using Apples iCloud services on non Apple devices or operating systems.
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
-  - mac
-  - opensource
   - linux
   - solution
   - icloud

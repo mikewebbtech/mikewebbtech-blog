@@ -4,6 +4,7 @@ date: 2015-11-06T10:01:42
 summary: Mac and their OS's have always been spouted as being a pinnacle of consumer grade IT design and user interface experience. Pfft, what ever. I've been using Mac ever since...
 categories:
   - home-lab
+  - toolage
 tags:
   - mac
   - fanboy

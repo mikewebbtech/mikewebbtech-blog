@@ -5,6 +5,7 @@ summary: After having a running battle with my, what turns out, cheap Chinese CS
 draft: false
 categories:
   - home-lab
+  - toolage
 tags:
   - linux
   - solution

@@ -4,7 +4,7 @@ date: 2017-05-24T11:30:43
 summary: Install and use the open source FFmpeg utility on macOS for high quality audio and video encoding and transcoding with support for x two AAC-LC encoders (aac & libfdk_aac) and one HE-AAC(v1/2) encoder (libfdk_aac).
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
   - mac
   - macports

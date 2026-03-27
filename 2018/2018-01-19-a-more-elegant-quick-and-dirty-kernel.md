@@ -4,6 +4,7 @@ date: 2018-01-19T09:28:51
 summary: As we have seen, the original/traditional/generic way to install new kernels or patch existing kernels is a relatively straight forward affair but requires manual management.  Let's use git to help
 categories:
   - home-lab
+  - toolage
 draft: false
 tags:
   - linux

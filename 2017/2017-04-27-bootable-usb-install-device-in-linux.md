@@ -5,6 +5,7 @@ summary: These instructions will create a bootable install medium for the instal
 draft: false
 categories:
   - home-lab
+  - toolage
 tags:
   - linux
   - opensource

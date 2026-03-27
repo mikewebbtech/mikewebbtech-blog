@@ -4,7 +4,7 @@ date: 2017-04-23T23:56:21
 summary: "Having a small collection idevices in our household, we tend use the icloud calendar app and iCal coordinate our lives. With some work, non apple devices can share the same calendar "
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
   - mac
   - solution

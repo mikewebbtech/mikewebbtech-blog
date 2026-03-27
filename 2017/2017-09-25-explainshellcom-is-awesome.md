@@ -4,7 +4,7 @@ date: 2017-09-25T11:45:56
 summary: Bash shell is under rated and the CLI is very powerful if not arcane with mysterious incantations. Well I came across this site breaks down a command and exlpains the structure and what is it is doing.  preaty cool
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
   - linux
   - shell

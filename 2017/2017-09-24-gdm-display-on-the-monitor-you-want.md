@@ -4,7 +4,7 @@ date: 2017-09-24T17:58:32
 summary: How configure gdm when running a duel monitor setup. I'm running Gnome3 and the GNOME Display Manager (GDM) which handles graphical user login, as well as other duties....My primary monitor...
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
   - linux
   - solution

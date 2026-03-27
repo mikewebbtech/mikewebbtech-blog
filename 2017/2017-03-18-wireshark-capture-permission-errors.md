@@ -6,6 +6,7 @@ draft: false
 categories:
   - home-lab
   - security
+  - networking
 tags:
   - linux
   - ubuntu

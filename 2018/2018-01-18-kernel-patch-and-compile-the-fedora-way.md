@@ -5,6 +5,7 @@ summary: Each distribution has a preferred way which tends to result in a nice r
 draft: false
 categories:
   - home-lab
+  - toolage
 tags:
   - linux
   - fedora

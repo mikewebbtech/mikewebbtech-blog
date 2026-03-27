@@ -5,6 +5,7 @@ summary: Absolute pain getting Debian installed on my UEFI only sytem. When work
 draft: false
 categories:
   - home-lab
+  - toolage
 tags:
   - linux
   - solution

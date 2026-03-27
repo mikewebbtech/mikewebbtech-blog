@@ -5,7 +5,7 @@ summary: I see the need for home automation.  Well...I would like to explore thi
 categories:
   - automation
   - home-lab
-
+  - toolage
 draft: false
 tags:
   - homeassitant

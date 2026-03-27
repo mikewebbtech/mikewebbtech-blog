@@ -4,7 +4,7 @@ date: 2017-04-24T00:25:18
 summary: Alternate method to get non apple devices to acces iCal. Using three ingredients.  Your calendar's server address . Your user ID dsid.  The calendar name (cal_name).
 draft: false
 categories:
-  - home-lab
+  - toolage
 tags:
   - mac
   - solution

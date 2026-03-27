@@ -5,6 +5,7 @@ summary: A guide  created from memory and some notes on how I installed Arch Lin
 draft: false
 categories:
   - home-lab
+  - toolage
 tags:
   - linux
   - Arch

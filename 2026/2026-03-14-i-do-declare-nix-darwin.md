@@ -8,8 +8,8 @@ tags:
   - mac
   - opensource
 categories:
-  - home-lab
   - automation
+  - toolage
 series:
 ---
 

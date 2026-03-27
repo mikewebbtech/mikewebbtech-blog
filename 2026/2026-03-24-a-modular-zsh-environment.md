@@ -45,7 +45,7 @@ export ZDOTDIR=$HOME/.config/zsh
 > In Zsh, `ZDOTDIR` is a built-in environment variable that defines the directory where the shell looks for its configuration files. By default, if this variable is not set, Zsh looks in your home directory (`$HOME`).
 
 Now all my Zsh files like, my history, my aliases, and my plugins are all neatly tucked away in an *XDG Base[^1]* compliant folder. It makes backing up my "dotfiles" or moving to a new machine much simpler.
-[^1]: Probably more then what you wanted to know about ZDOTDIR and XDG. [Bootstrap zsh to XDG Standard](/2026/2026-03-26-zsh-xdg-standard)
+[^1]: Probably more then what you wanted to know about ZDOTDIR and XDG. [Bootstrap zsh to XDG Standard](../2026-03-26-zsh-xdg-standard)
 
 
 ### Step 2: The Logic Layer

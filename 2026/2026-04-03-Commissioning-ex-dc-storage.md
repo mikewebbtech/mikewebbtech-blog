@@ -24,7 +24,10 @@ My strategy is to design a reliable storage, not by investing in expensive new d
 
 Here I will go the issues I hit during a burn-in process, what I assumed was happening, what was actually happening, and how I confirmed and fixed it.
 
-## The Issue
+>
+> ## The Issue
+> {.one}
+
 I picked up a batch of HGST 4TB SAS drives from multiple sellers and started my standard commissioning burn-in before adding them to a ZFS pool.
 
 > [!goal]
@@ -41,7 +44,10 @@ Pretty quickly, something stood out.
 
 Not slightly slower, like orders of magnitude slower...by days *s-l-o-w*. The kind of slow where you start wondering if the drive is about to fall off the perch and I just lost the ebay disk roulette.
 
-## My Initial Assumption
+>
+> ## My Initial Assumption
+> {.two}
+
 My first thought was around error recovery.
 
 With SATA drives, TLER (Time-Limited Error Recovery) is a known factor. Drives without it can hang for ages trying to recover a bad sector, which is bad news for RAID/ZFS.
@@ -52,7 +58,10 @@ So the assumption was:
 
 That instinct wasn’t wrong—but it wasn’t the full story either.
 
-## SAS vs SATA: The Important Difference
+>
+> ## SAS vs SATA: The Important Difference
+> {.three}
+
 SATA drives:
 - Use TLER/ERC to limit recovery time
 - Often need tuning for RAID use
@@ -66,7 +75,10 @@ So yes, SAS drives already behave like TLER-enabled drives..very enterprisey.
 But here’s the catch:
 **The behaviour is firmware-defined, and not all SAS drives behave the same.**
 
-## Digging Deeper with sdparm
+>
+> ## Digging Deeper with sdparm
+> {.four}
+
 To understand what was happening, I pulled the error recovery settings:
 
 ```bash
@@ -79,7 +91,10 @@ That’s where things got interesting.  Two key parameters stood out:
 
 And suddenly, the drives split into two clear groups.
 
-## The Defining Difference
+>
+> ## The Defining Difference
+> {.five}
+
 Some drives had:
 - RTL = 8000
 - PER = 0
@@ -90,7 +105,10 @@ Others had:
 
 At a glance, they’re just numbers. In practice, they **completely** change how the disk behaves.
 
-## 👉 What is RTL 👈
+> 
+> ## 👉 What is RTL 👈
+> {.one}
+
 RTL is the main issue here 
 - RTL = 8000 → recovery is time-limited (~8 seconds)
 - RTL = 0 → unlimited retries (∞ seconds)
@@ -106,7 +124,10 @@ If the disk hits a weak sector:
 
 That “slow disk” wasn’t slow, it was busy trying very hard not to fail.
 
-## What is PER (and isn't)
+>
+> ## What is PER (and isn't)
+> {.two}
+
 PER controls whether recovered errors are reported.
 - PER = 0 → silent recovery
 - PER = 1 → report recovered errors
@@ -117,7 +138,9 @@ It just controls visibility.
 
 That said, drives with PER=1 are often tuned for more aggressive recovery behaviour, which adds to the effect.
 
-## Confirming the Diagnosis
+>
+> ## Confirming the Diagnosis
+> {.three}
 
 To make sure this wasn’t just theory, I checked a few things.
 
@@ -140,7 +163,10 @@ SMART data helped distinguish between:
 - Firmware behaviour (clean stats, just slow)
 - Actual degradation (growing defect list, errors)
 
-## What Was I seeing
+>
+> ## What Was I seeing
+> {.four}
+
 I could roughly interpret outcomes like this:
 - Slow + clean SMART = aggressive firmware, not necessarily bad
 - Slow + errors = drive is struggling, higher risk
@@ -148,7 +174,10 @@ I could roughly interpret outcomes like this:
 
 This distinction matters, because not every *slow* disk is a *failing* disk. But it **is** a *problem* disk in a zfs pool.
 
-## Why This Matters for ZFS
+>
+> ## Why This Matters for ZFS
+> {.five}
+
 > [!important]
 > ZFS expects disks to behave predictably.
 
@@ -163,7 +192,9 @@ You can end up with:
 
 Even if every disk is technically *healthy*.
 
-## Fixing the Problem
+> 
+> ## Fixing the Problem
+> {.one}
 
 To all the disks in a pool behaving consistantly, I made sure they had the same recovery settings:
 
@@ -180,7 +211,10 @@ After that:
 > ![note] A quick note 
 > Not all firmware will respect changes, so always verify after applying.
 
-## A Better Burn-In Process
+> 
+> ## A Better Burn-In Process
+> {.two}
+
 After going through this, my process now looks like:
 1. Destructive test (faster, still effective)
     ```bash
@@ -203,9 +237,13 @@ This gives me both:
 - Host-level validation (badblocks)
 - Firmware-level validation (SMART)
 
-## Process Logic
+> 
+> ## Process Logic
+> {.three}
+
 Visually my logic for disk burn-in and resolving this issue  
 ```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
 flowchart TD 
 A[Buy used SAS drives] --> B[Run burn-in] 
 B --> C{badblocks slow on some disks?} 
@@ -218,9 +256,13 @@ F -->|Yes| I[Decide: keep, tune or reject]
 G --> H[Run SMART long test] --> I[Decide: keep, tune, or reject]
 ```
 
-## (RTL) Recovery Time Limit Flow
+> 
+> ## (RTL) Recovery Time Limit Flow
+> {.four}
+
 Logically identify and resolving RTL issues
 ```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
 flowchart TD 
 A[Slow badblocks] --> B[Check RTL] 
 B --> C{RTL = 0?} 
@@ -234,7 +276,10 @@ I -->|Yes| J[Possible media degradation]
 I -->|No| K[Likely firmware behaviour]
 ```
 
-## My Takeaway on This
+> 
+> ## My Takeaway on This
+> {.five}
+
 Cheap ex-datacenter SAS drives are absolutely worth it. But..but only if you put the time in.
 
 But what you’re really buying is:

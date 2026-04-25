@@ -182,6 +182,7 @@ When the browser loads a page with a Mermaid diagram:
 
 Now, explaining a workflow is as simple as typing a few lines of text. For example, my **Nix-Darwin Update Cycle**:
 code:
+
 ```
 %%{init: {'flowchart': {'curve': 'linear'}}}%%
 flowchart TD

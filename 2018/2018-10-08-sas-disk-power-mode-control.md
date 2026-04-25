@@ -105,11 +105,11 @@ Long (extended) Self Test duration: 6 seconds [0.1 minutes]
 **Start a short foreground selftest and verify results**
 
 ```
-# smartctl -C -t short /dev/sda
+smartctl -C -t short /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 
-# smartctl -l selftest /dev/sda
+smartctl -l selftest /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -127,7 +127,7 @@ Short Foreground Self Test Successful
 **Look at the error log**
 
 ```bash
-# smartctl -l error /dev/sda
+smartctl -l error /dev/sda
 smartctl 6.5 2016-05-07 r4318 [x86_64-linux-3.10.0-862.14.4.el7.x86_64] (local build)
 Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -146,7 +146,7 @@ Non-medium error count: 0
 **Examine smarttools extended output with background media scan (BMS) is active**
 
 ```bash
-# smartctl -x /dev/sda
+smartctl -x /dev/sda
 <--snip-->
 Background scan results log
 Status: scan is active
@@ -164,14 +164,13 @@ Background scanning is active, this wont affect disk performance as "The BMS pro
 **Let's urn off BMS on this SAS drive**
 
 ```bash
-# sdparm --clear=EN_BMS --save /dev/sda
-
+sdparm --clear=EN_BMS --save /dev/sda
 ```
 
 **Query the disks abilty and value for standby**
 
 ```bash
-# sdparm --flexible -6 -p po -l /dev/sda | grep -e SCT
+sdparm --flexible -6 -p po -l /dev/sda | grep -e SCT
 SCT 0 [cha: y, def: 0, sav: 0] Standby_z condition timer (100 ms)
 
 ```
@@ -179,7 +178,7 @@ SCT 0 [cha: y, def: 0, sav: 0] Standby_z condition timer (100 ms)
 **No counters defined (SCT 0 = not countdown time till standby)**
 
 ```bash
-# sdparm --flexible -6 -p po -l /dev/sda | grep -e "STANDBY "
+sdparm --flexible -6 -p po -l /dev/sda | grep -e "STANDBY "
 STANDBY 0 [cha: y, def: 0, sav: 0] Standby_z timer enable
 
 ```
@@ -194,7 +193,7 @@ STANDBY 0 [cha: y, def: 0, sav: 0] Standby_z timer enable
 **Let's enable it**
 
 ```bash
-# sdparm --flexible -6 -v -S -p po --set=STANDBY=1 /dev/sda
+sdparm --flexible -6 -v -S -p po --set=STANDBY=1 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x3 start_bit=0 num_bits=1 val=1 acronym: STANDBY
 >>> about to open device name: /dev/sda
@@ -207,14 +206,14 @@ mode select (6) cdb: 15 11 00 00 34 00
 **Important to verify it**
 
 ```bash
-# sdparm --flexible -6 -p po -l /dev/sda |grep -e "STANDBY "
+sdparm --flexible -6 -p po -l /dev/sda |grep -e "STANDBY "
 STANDBY 1 [cha: y, def: 0, sav: 1] Standby_z timer enable
 ```
 
 **Set the SCT (Standby\_z condition timer in units of 100ms so 9000=15 minutes)**
 
 ```bash
-# sdparm --flexible -6 -v -S -p po --set=SCT=9000 /dev/sda
+sdparm --flexible -6 -v -S -p po --set=SCT=9000 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x8 start_bit=7 num_bits=32 val=9000 acronym: SCT
 >>> about to open device name: /dev/sda
@@ -227,14 +226,14 @@ mode select (6) cdb: 15 11 00 00 34 00
 **Remember: Verify**
 
 ```bash
-# sdparm --flexible -6 -p po -l /dev/sda |grep -e SCT
+sdparm --flexible -6 -p po -l /dev/sda |grep -e SCT
 SCT 9000 [cha: y, def: 0, sav:9000] Standby_z condition timer (100 ms)
 ```
 
 **Let's view all contents of the Power condition [po] mode page**
 
 ```bash
-# sdparm --flexible -6 -p po -l /dev/sda
+sdparm --flexible -6 -p po -l /dev/sda
 /dev/sdb: HGST HUS726040ALS214 MS00
 Direct access device specific parameters: WP=0 DPOFUA=1
 Power condition [po] mode page:
@@ -264,7 +263,7 @@ CCF_STOPP 0 [cha: y, def: 0, sav: 0] check condition on transition from stopped
 
 **Enable the condition timer**
 ```bash
-# sdparm --flexible -6 -v -S -p po --set=IDLE_B=1 /dev/sda
+sdparm --flexible -6 -v -S -p po --set=IDLE_B=1 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x3 start_bit=2 num_bits=1 val=1 acronym: IDLE_B
 >>> about to open device name: /dev/sda
@@ -276,7 +275,7 @@ mode select (6) cdb: 15 11 00 00 34 00
 
 **Set the condition timer to 5 minutes**
 ```bash
-# sdparm --flexible -6 -v -S -p po --set=ICT=3000 /dev/sda
+sdparm --flexible -6 -v -S -p po --set=ICT=3000 /dev/sda
 mp_settings: page,subpage=0x1a,0x0 num=1
 pdt=-1 start_byte=0x4 start_bit=7 num_bits=32 val=3000 acronym: ICT
 >>> about to open device name: /dev/sda

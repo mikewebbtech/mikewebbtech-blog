@@ -12,7 +12,6 @@ series:
   - implementing-zsh
 ---
 
-
 In Zsh, ZDOTDIR is a built-in environment variable that defines the directory where the shell looks for its configuration files. By default, if this variable is not set, Zsh looks in your home directory ($HOME).
 
 Setting this variable uses the shell's native initialisation to change its own "home" base.

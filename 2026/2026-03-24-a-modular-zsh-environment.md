@@ -12,7 +12,7 @@ series:
   - implementing-zsh
 ---
 
-# The Modular Blueprint
+# Modular Blueprint
 
 >
 > ## Why I Rebuilt My Shell from Scratch

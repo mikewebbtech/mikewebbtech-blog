@@ -10,7 +10,8 @@ tags:
 categories:
   - home-lab
   - toolage
-series: How-I-Proxmox
+series:
+  - proxmox
 ---
 
 ## Proxmox VE + ZFS = Practical Storage Strategy

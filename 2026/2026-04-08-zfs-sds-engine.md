@@ -9,7 +9,7 @@ tags:
 categories:
   - home-lab
   - toolage
-series: How-I-Proxmox
+series:
 ---
 ## ZFS: The Software-Defined Storage Engine Behind Proxmox VE
 

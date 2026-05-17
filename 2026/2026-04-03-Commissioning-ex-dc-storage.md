@@ -10,6 +10,7 @@ categories:
   - home-lab
   - toolage
 series:
+  - proxmox
 ---
 
 To save (a lot) of money when building out servers and services in my home lab, I buy “cheap” ex-datacenter SAS drives from eBay, I already know the deal: I'm trading money for my time and, sometimes, frustration.

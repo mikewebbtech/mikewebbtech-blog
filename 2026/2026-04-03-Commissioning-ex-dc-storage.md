@@ -6,7 +6,6 @@ summary: Or When SAS Drives Bite Back Or Debugging Slow Burn-In Tests in a Proxm
 tags:
   - storage
   - hardware
-  - proxmox
 categories:
   - home-lab
   - toolage

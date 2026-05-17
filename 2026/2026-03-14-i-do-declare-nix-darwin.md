@@ -144,7 +144,7 @@ This design improves security because the builds run as the isolated builder use
 >Although sudo is required for system rebuilds, you can enable Touch ID authentication so rebuilds only require a fingerprint.
 >This can be configure easily using Nix
 
-## Bootstrapping Nix-Darwin
+### Bootstrapping Nix-Darwin
 In 2026, **Flakes** are the default way to manage Nix. They ensure your setup is locked to specific versions, making it 100% reproducible.
 
 Once Nix is installed, create  the Nix-Darwin configuration directory and initialise a new flake:

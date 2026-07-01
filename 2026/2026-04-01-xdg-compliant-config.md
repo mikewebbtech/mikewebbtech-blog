@@ -94,27 +94,16 @@ Initially, almost all of my exports lived together in one file.
 As I learned more about the Zsh startup lifecycle, I realised that not every environment variable belongs in the same place.
 
 Global variables such as:
-
 - `PATH`
-    
 - `XDG_*`
-    
 - `EDITOR`
-    
 - `GNUPGHOME`
-    
-
 are required by every shell, including scripts.
 
 Interactive settings such as:
-
 - `MANPAGER`
-    
 - `BAT_THEME`
-    
 - `FZF_DEFAULT_OPTS`
-    
-
 only matter when I'm actively using the terminal.
 
 That distinction eventually led me to split my exports between `.zshenv` and `.zshrc`, allowing scripts to avoid loading unnecessary configuration.
@@ -124,18 +113,15 @@ That distinction eventually led me to split my exports between `.zshenv` and 
 One area I hadn't expected to enjoy was writing my own shell functions.
 
 Rather than relying on a full plugin manager, I started building a small collection of helper functions that did exactly what I needed.
-
-Functions for loading plugins.
-
-Functions for sourcing configuration files.
-
-Functions for updating plugins.
+- Functions for loading plugins.
+- Functions for sourcing configuration files.
+- Functions for updating plugins.
 
 Nothing particularly complicated, but each one has a single responsibility.
 
 As the functions evolved, I found myself replacing external commands with native Zsh features, making them both simpler and faster.
 
-That ended up becoming a surprisingly enjoyable part of the project.
+That ended up becoming a surprisingly enjoyable part of the project 🤓.
 
 ## Keeping Interactive Features Together
 
@@ -145,31 +131,25 @@ My Vim key bindings, shell history configuration, prompt customisation, plugin l
 
 When I'm experimenting with command-line editing or trying a new plugin, I know exactly where to look.
 
-## Small Files Are Easier to Reason About
+## It's Easier with Small Files
 
 One unexpected benefit of this approach is that each file now has a clear purpose.
 
-If I'm working on aliases, I open my aliases file.
+🔧 If I'm working on aliases, I open my aliases file.
 
-If I'm experimenting with Vim mode, I know exactly which file contains those settings.
+🔧 If I'm experimenting with Vim mode, I know exactly which file contains those settings.
 
-If I break something, I've dramatically reduced the search space.
+🧨 If I break something, I've dramatically reduced the search space.
 
-Instead of trying to understand one large configuration file, I'm working with a collection of much smaller building blocks.
-
-That makes experimentation feel much less risky.
+Instead of trying to understand one large configuration file, I'm working with a collection of much smaller building blocks.  This makes experimentation feel much less risky.
 
 ## Organisation Before Optimisation
 
-Looking back, I think I was originally chasing performance.
+Looking back, I think I was originally chasing performance. I wanted a faster shell. What I needed was better organisation.
 
-I wanted a faster shell.
+Once the configuration became modular, optimisation naturally flowed to becaming easier because every component now had a clearly defined role.
 
-What I actually needed was better organisation.
-
-Once the configuration became modular, optimisation naturally became easier because every component had a clearly defined role.
-
-It's much easier to improve a system when you understand its structure.
+**It's much easier to improve a system when you understand its structure.**
 
 ## Looking Ahead
 

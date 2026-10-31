@@ -14,9 +14,7 @@ series:
 
 # Modular Blueprint
 
->
-> ## Why I Rebuilt My Shell from Scratch
-> {.one}
+## Why I Rebuilt My Shell from Scratch
 
 For a long time, my terminal was a growing mess. Every time I need a new alias or a snippet for Git, I’d just add it at the bottom of my .zshrc. It worked, but it was brittle. If functionality broke, like a completion conflicted, I had to scroll through a hundreds of lines of code and try to find the culprit.
 
@@ -24,9 +22,7 @@ As I’ve progressed in my career and studies and started managing more complex 
 
 I decided to treat my shell configuration like a project: modular, documented, and clean. Here is how I structured my environment and how it's changed the way I work.
 
->
-> ## The Goal: Intuitive Flow 
-> {.two}
+## The Goal: Intuitive Flow 
 
 I wanted an environment that was fast, provided instant context (like what Git branch I'm on, etc), and—most importantly, that was easy to extend and maintain. I moved away from heavy "all-in-one" frameworks and built a modular system that I could understand from the ground up. Also, I didn't need bloated solutions that push swag in the shell (looking at you [oh-my-zsh](https://ohmyz.sh))
 

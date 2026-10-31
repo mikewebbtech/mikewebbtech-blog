@@ -33,8 +33,7 @@ ZFS is often described as a filesystem, but that description undersells what it 
 
 This article is not intended to be a deep ZFS primer. The internet already has excellent documentation, benchmarks, arguments, and religious wars surrounding ZFS. Instead, this article documents the storage design strategy behind my Proxmox VE homelab, how I balance performance, reliability, and capacity, and why I made the design decisions that I did.
 
-> ## Start With the Physical Layer
-> { .one }
+## Start With the Physical Layer
 
 Before designing pools, datasets, or caching strategies, I start with the hardware itself.
 
@@ -103,8 +102,7 @@ In short, ZFS wants to manage the disks itself.
 
 For this build, simplicity and recoverability matter more to me than maintaining legacy RAID workflows.
 
-> ## Persistent Device Naming Matters
-> { .two }
+## Persistent Device Naming Matters
 
 > [!danger]  
 > Do not build ZFS pools using raw Linux device names like `/dev/sda`.
@@ -171,8 +169,6 @@ I will cover:
 
 ## A Minimal ZFS Primer
 
-{ .three }
-
 This article focuses on architecture rather than teaching ZFS fundamentals, but there are a few concepts worth defining before moving further.
 
 ### Core Concepts
@@ -212,8 +208,7 @@ My approach is simple:
 
 In a mixed hypervisor and NAS environment like this one, memory balance matters just as much as storage design.
 
-> ## Architecting the Storage
-> { .four }
+## Architecting the Storage
 
 Designing storage is always a balancing act between three competing priorities:
 
@@ -237,7 +232,7 @@ For example:
 
 The correct answer depends entirely on the workload.
 
-## Defining My Workloads
+### Defining My Workloads
 
 My Proxmox VE server runs a mixture of:
 - virtual machines
@@ -263,7 +258,7 @@ Others care more about:
 Understanding those workload characteristics is what drives the storage design.
 
 
-## Strategy Direction
+### Strategy Direction
 
 At a high level, my design strategy separates:
 - bulk capacity storage

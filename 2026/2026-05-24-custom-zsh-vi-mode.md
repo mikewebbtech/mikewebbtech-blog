@@ -13,14 +13,12 @@ series:
 ---
 
 
-> ## What Is vi-mode
-> {.one}
+## What Is vi-mode
 **`vi-mode`** in a terminal shell (like Zsh or Bash) replaces the default command-line editing behaviour with the modal editing system used by the **Vim** text editor.
 
 Instead of working in the command line like a simple text box, `vi-mode` turns it into working like it is a mini Vim buffer.
 
-> ## Why Use It?
-> {.three}
+## Why Use It?
 
 ### Total Efficiency for Vim Users
 
@@ -43,8 +41,7 @@ In my configuration file, there is a shortcut bound to `Ctrl-e`. If you type a 
 
 I can press `v` while in normal mode to launch a visual selection directly on the command line, letting me highlight, yank (copy) to system clipboard, or delete precise blocks of text just like I would inside neovim.
 
-> ## The How it works
-> {.two}
+## The How it works
 
 ### My Configuration file
 
@@ -137,8 +134,7 @@ echo -ne '\e[5 q' # Set the beam cursor shape immediately when a new shell launc
 preexec() { echo -ne '\e[5 q' ;} # Reset cursor to a beam right after a command is sent, before drawing the next prompt.
 ````
 
-> ## Understanding the Modes
-> {.four}
+## Understanding the Modes
  
 When my  terminal now operates in two primary states. The cursor shape tells you which mode you are in:
 
@@ -147,8 +143,7 @@ When my  terminal now operates in two primary states. The cursor shape tells you
 
 To return to typing (insert mode), use standard Vim commands like **`i`** (insert at cursor) or **`a`** (append after cursor).
 
-> ## Custom Productivity Macros
-. {.five}
+## Custom Productivity Macros
 
 You have mapped several powerful shortcuts that work while you are in **Insert Mode**:
 - **`Ctrl-n`**: Opens the `fzf` fuzzy finder. Once you select a file, it automatically opens it in `nvim`.
@@ -156,8 +151,7 @@ You have mapped several powerful shortcuts that work while you are in **Insert 
 - **`Ctrl-z`**: Runs `zi`, the interactive directory jumper (zoxide). This is the fastest way to navigate your filesystem.
 - **`Ctrl-e`**: If you are typing a long, complex command and realize you need a full editor, hit this to move the current line into a full `nvim` buffer. Saving and exiting `nvim` will bring the command back to your prompt.
 
-> ## History and Navigation
-> {.one}
+## History and Navigation
 
 Navigating your command history is unified across both Insert and Command modes:
 - **`Ctrl-k`**: Search backwards through history (Up).
@@ -166,8 +160,7 @@ Navigating your command history is unified across both Insert and Command modes:
 
 Because `KEYTIMEOUT` is set to `1`, the switch between hitting `Esc` and entering a command is near-instant, making the transition feel very responsive.
 
-> ## Advanced Line Editing (Command Mode)
-> {.two}
+## Advanced Line Editing (Command Mode)
 
 Once you hit **`Esc`**, you can use standard Vim motions to manipulate the command line:
 - **`w` / `b`**: Jump forward or backward by word.
@@ -176,8 +169,7 @@ Once you hit **`Esc`**, you can use standard Vim motions to manipulate the comm
 - **`dd`**: Clear the entire line.
 - **`u`**: Undo the last change.
 
-> ## Enhanced Tab Completion Menu
-> {.three}
+## Enhanced Tab Completion Menu
 
 When you type a partial command and hit **Tab**, a completion menu appears. Your configuration allows you to navigate this menu using specific keys:
 - **`Ctrl-k`**: Move selection Up.
@@ -185,8 +177,7 @@ When you type a partial command and hit **Tab**, a completion menu appears. You
 - **`Ctrl-h`**: Move selection Left.
 - **`Ctrl-l`**: Move selection Right.
 
-> ## Summary of Keybindings
-> {.four}
+## Summary of Keybindings
 
 |**Key**|**Mode**|**Action**|
 |---|---|---|

@@ -17,9 +17,7 @@ They say a picture is worth a thousand words, but that picture can costs thousan
 
 As someone who values **Infrastructure as Code (IaC)** and declarative systems like Ansible, Nix, etc, this manual overhead was a turn off.  The friction of creating diagrams caused me to not create them, even if they could explain better or easier then words could.  I needed a solution that treated diagrams like code: version controlled, easily amendable, and rendered automatically.  Enter **[Mermaid.js](https://mermaid.js.org)**.
 
-> 
-> ## The Vision: Diagrams as Code
-> {.one}
+## The Vision: Diagrams as Code
 
 Mermaid would allow me to create diagrams using a simple, Markdown like syntax. It gels well with a developer mindset workflow:
 1.  **Efficiency:** Type your logic; the engine handles the layout.
@@ -27,9 +25,7 @@ Mermaid would allow me to create diagrams using a simple, Markdown like syntax. 
 3.  **Consistency:** All diagrams share a unified aesthetic.
 4.  **Fun™:** It's cool tech that’s genuinely rewarding to learn. 😎
 
->
-> ## A Native Hugo Implementation
-> {.four}
+## A Native Hugo Implementation
 
 Well kind of native. Hugo doesn't have a built in a way to render mermaid code blocks in markdown.  But it has the tools built in to make it happen.
 
@@ -176,9 +172,7 @@ When the browser loads a page with a Mermaid diagram:
 3. **The Scan:** `startOnLoad: true` triggers a scan of the DOM for any element with the `mermaid` class.
 4. **The Render:** Mermaid parses your text-based logic, calculates the geometry, and replaces the `<pre>` tag with a scalable **SVG**.
 
->
-> ## The Result: Document Diagrams
-> {.two}
+## The Result: Document Diagrams
 
 Now, explaining a workflow is as simple as typing a few lines of text. For example, my **Nix-Darwin Update Cycle**:
 code:
@@ -206,9 +200,7 @@ flowchart TD
 
 The result is a clean, responsive diagram that lives right inside my Markdown file.  No creating and exporting PNGs, no more broken links, and no more "pixel pushing."
 
->
-> ## My Thoughts
-> {.three}
+## My Thoughts
 
 Having just started using Mermaid in documents and now having built that same functionality into my Hugo site, I feel that transitioning to Mermaid has removed the creative block that visual documentation represents to me.  By treating diagrams as code, I've aligned my blogging workflow with my other workflow philosophies that I am developing: **Declarative, Versioned, and Automated.**
 

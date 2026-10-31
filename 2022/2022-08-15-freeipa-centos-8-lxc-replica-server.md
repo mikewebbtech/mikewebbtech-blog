@@ -85,7 +85,7 @@ This is a 3 part process
 2. deal with some dns and host group stuff on ipa02 container: 
 3. Back on ipa02 container to migrate it up to a replica server.
 
-### Part 1:
+## Part 1:
 
 Add the -x fix for chronyd and restart the service, setup the firewall policy, install the AppStream module and install the client.
 
@@ -107,7 +107,7 @@ Add the -x fix for chronyd and restart the service, setup the firewall policy, i
 
 ```
 
-### Part 2:
+## Part 2:
 
 On ipa01, the first (and only) FreeIPA server we will double check that that it "knows" about ipa02, add ipa02 to the "ipaservers" host group and then fix up
 
@@ -130,7 +130,7 @@ On ipa01, the first (and only) FreeIPA server we will double check that that it 
   Member hosts: ipa01.hugel.lan, ipa02.hugel.lan
 ```
 
-### Part 3:
+## Part 3:
 
 Now back onto ipa02 again for the throw down finishing move. Install the idm server module stream, run replica install command, do some verifications and reboot...ah, the reboot.
 

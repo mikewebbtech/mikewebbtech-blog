@@ -10,7 +10,9 @@ tags:
   - opensource
 ---
 
-The Wordpress.com gouging is over. Since moving to a new house with business class internet and a new server rack with a High availability server/storage solution, I'm in the process of moving existing paid subscription services and other external hosted SaaS wallet drains over to self hosting. I'll try to keep everything up and running whole I move and convert to a new setup.
+## The Wordpress.com gouging is over.
+
+Since moving to a new house with business class internet and a new server rack with a High availability server/storage solution, I'm in the process of moving existing paid subscription services and other external hosted SaaS wallet drains over to self hosting. I'll try to keep everything up and running whole I move and convert to a new setup.
 
 Time for a beer(s)
 

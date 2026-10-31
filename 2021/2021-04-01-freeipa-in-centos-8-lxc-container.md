@@ -23,7 +23,7 @@ As part of creating a new home lab and home services and network infrastructure,
 
 FreeIPA in a container. Why? Containers allow for greater density in my servers. I'm using Proxmox as my storage and hypervisor cluster infrastructure. I've seen information on running FreeIPA as a Docker application as well as in a virtual machine. My decision to run it in a machine container was mainly resource constraints, and Proxmox supports LXC out of the box and is the way they do containers.
 
-The assumptions here are that you:
+The assumptions here are:
 
 - Have created a CentOS 8 LXC container using whatever method (Proxmox GUI/CLI or LXD) and whatever server (Proxmox, cloud VM, or other Linux server).
 - Are going to set up two containers with FreeIPA in master/master replication. I mean, this will be the lifeblood of auth, access, and DNS for the entire network; let’s have a spare up our sleeve. Oh, and containers in a cluster can be moved around the different servers. Nothing like a bit of redundancy.

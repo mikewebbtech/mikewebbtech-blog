@@ -53,8 +53,6 @@ I highly recommend reading the following links to better understand GitHub Actio
 - [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 - [Choosing and using a workflow template](https://docs.github.com/en/actions/how-tos/write-workflows/use-workflow-templates#choosing-and-using-a-workflow-template)
 
----
-
 ## What problem am I solving?
 
 Before this workflow, a deployment looked roughly like this:
@@ -84,8 +82,6 @@ The new approach:
 
 No more local build steps. No more “oh yeah, I still need to deploy this".  Just commit the main branch as apart of my version control workflow. 🪄 magic. 
 
----
-
 ## High-level view of the workflow
 
 Here’s the workflow file (simplified description, not the full YAML):
@@ -104,8 +100,6 @@ Here’s the workflow file (simplified description, not the full YAML):
 - Deploy job:
       - takes the built artifact
       - deploys it to GitHub Pages
-
----
 
 ## Grab a workflow from Marketplace
 I mean, why reinvent the the wheel when the GitHub team have already created a **Pages build and deploy** action.  A perfect starting point.  Github have gone out of their way to make it easy.
@@ -360,8 +354,6 @@ Key points:
 
 At this point, the new version of the site is live.
 
----
-
 ## Yes this is a CI/CD pipeline
 
 Even though this is “just” a static site, it’s still a proper **CI/CD pipeline**:
@@ -376,8 +368,6 @@ Even though this is “just” a static site, it’s still a proper **CI/CD pipe
     - No manual “deploy” step, no copying files, no local scripts.
 
 Did I mention  for web hosting, this whole thing is **free** for a public repo, which was one of my core requirements when I chose Hugo and GitHub Pages.
-
----
 
 ## Taking this to the next level
 

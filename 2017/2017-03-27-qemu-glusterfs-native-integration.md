@@ -17,7 +17,7 @@ series:
 ---
 # GlusterFS Native Access
 
-I was never a fan of FUSE performance (looking at you QNAP),  the performance boost in block device access for Qemu/KVM based hosts using POSIX vs FUSE is impressive.  Gluster as a SDS solution for oVirt self hosted engine is worth investigating for a multitude of use cases.
+I was never a fan of FUSE performance (looking at you QNAP), the performance boost in block device access for Qemu/KVM based hosts using POSIX vs FUSE is impressive.  Gluster as a SDS solution for oVirt self hosted engine is worth investigating for a multitude of use cases.
 
 My own testing for HA replication has yielded positive results.
 

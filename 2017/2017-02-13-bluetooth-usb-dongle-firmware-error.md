@@ -31,14 +31,14 @@ My adaptor came with windows drivers but I chose to download updated drivers fro
 A nifty utility called hex2hcd will convert the hex file into the what linux can load.
 
 
-```
-$> hex2hcd BCM20702A1\_001.002.014.1483.1669.hex
+```bash
+$> hex hcd BCM20702A1\_001.002.014.1483.1669.hex
 ```
 
 Then copy to the firmware directory with the correct name:
 
 
-```
+```bash
 $> sudo cp ./BCM20702A1\_001.002.014.1483.1669.hcd /lib/firmware/brcm/BCM20702A1-0a5c-21e6.hcd
 ```
 

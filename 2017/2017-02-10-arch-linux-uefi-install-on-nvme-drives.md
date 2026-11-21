@@ -25,7 +25,7 @@ For a primer you should read the official Arch Linux install wiki page. <https:
 
 But we are going to use GRUB as the boot loader as it "the common loader" amongst linux and it now supports NVMe drives.  However it still doesn't support "exotic" (e.g. LVM) file systems for the root partition (/).  We will use LVM on the root partition so we know how to work around the limitation as well as being able to capitalise on the advantages of using LVM or even more exotic root partition setups like LUKS to which LVM can be layered upon ([Logical Volume Manager](https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)) , [Linux Unified Key Setup](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system)).  Instead of creating the traditional partition for swap, we will make a swap volume ala LVM style.
 
-### Settle in.  This is going to take a while.
+## Settle in.  This is going to take a while.
 
 Download the latest .iso of Arch Linux from your nearest mirror [Arch Linux mirror list](https://www.archlinux.org/download/)
 
@@ -39,36 +39,36 @@ Boot/Reboot with the new Arch Linux install USB stick in the target computer usi
 
 Ensure that you actually have boot up using UEFI mode and not legacy mode. type
 
-```
-# ls /sys/var/firmware/efi/efivars
+```bash
+ls /sys/var/firmware/efi/efivars
 ```
 if your screen fills up with number of long named files, it is populated and you are in UEFI mode.  If not, you will have make the appropriate changes in you BIOS (consult google or motherboard manual)
 
 Your NIC (wireless is not in the scope of this tutorial) should have been detected on boot up and your home router should have dished out an address to it via DHCP.  Let's check,  type in
 
-```
-# ping -c 5 www.google.com
+```bash
+ping -c 5 www.google.com
 ```
 If you have a response, great, you have a connection to the internet and are good to continue. If not, manually start the dhcp client or setup networking with what is relevant to your network e.g.
 
 Start dhcp client
 
-```
-# systemctl start dhcpcd@eth0
+```bash
+systemctl start dhcpcd@eth0
 ```
 Setup ipv4 networking
 
-```
-# ip address add 192.168.1.159/24 dev eth0 
-# ip route add default via 192.168.1.1 
-# echo "nameserver 192.168.1.1" >> /etc/resolv.conf 
-# ping www.google.com
+```bsah
+ip address add 192.168.1.159/24 dev eth0 
+ip route add default via 192.168.1.1 
+echo "nameserver 192.168.1.1" >> /etc/resolv.conf 
+ping www.google.com
 ```
 
-### Look for the NVMe drive
+## Look for the NVMe drive
 
-```
-# lsblk
+```bash
+lsblk
 sda      8:0    0  477G  0 disk 
 ├─sda1   8:1    0    1G  0 part [rescue]
 ├─sda2   8:2    0   12G  0 part [swap]
@@ -80,43 +80,43 @@ nvme0n1      8:32   1  500G  0 disk
 ```
 So on my system there is an existing SATA drive (sda), my boot USB stick (add) and the NVMe (nvme0n1) drive with a single partition of "god knows what but I don't care if it goes".  Yes this process will permanently delete all data on that drive (or any drive that is attached to the computer if you accidentally type the wrong command...fear).
 
-### Create Partitions
+## Create Partitions
 
 Use what ever disk partitioning system you are familiar with. by default you have disk, parted, gdisk, cgdisk and cfdisk available to you.  Pick your poison so we can create 3 partitions on the nvme0n1 drive.  I use cfdisk so I would type:
 
-```
-# cfdisk /dev/nvme0n1
+```bash
+cfdisk /dev/nvme0n1
 ```
 Really really important that you define the your nvme drive as cfdisk would automatically select my sda drive and that would be horrible.
 
 So I delete all partitions from the disk, create my 3 partitions:
 
-```
+```bash
 nvme0n1p1  size 512MB type: EFI (/mnt/boot/efi)
 nvme0n1p2 size  1024MB type: LINUX (/mnt/boot)
 nvme0np3 size 100% type: LVM (root/)
 ```
 
-### Format the partitions and setup LVM general filesystem
+## Format the partitions and setup LVM general filesystem
 
-```
-# mkfs.fat -F32 /dev/nvme0n1p1
-```
-
-```
-# mkfs.ext3 /dev/nvmen0n1p2
+```bash
+mkfs.fat -F32 /dev/nvme0n1p1
 ```
 
+```bash
+mkfs.ext3 /dev/nvmen0n1p2
 ```
-# pvcreate /dev/nvme0n1p3
-# vgcreate vg\_root /dev/nvme0n1p3
-# lvcreate -L 8G vg\_root -n lv\_swap
-# lvcreate -l 100%FREE vg\_root -n lv\_root
+
+```bash
+pvcreate /dev/nvme0n1p3
+vgcreate vg\_root /dev/nvme0n1p3
+lvcreate -L 8G vg\_root -n lv\_swap
+lvcreate -l 100%FREE vg\_root -n lv\_root
 ```
 The same partiction setup could all be done using parted which is another viable and quick method
 
-```
-# parted /dev/nvme0n1 
+```bash
+parted /dev/nvme0n1 
 (parted) mklabel gpt
 (parted) mkpart ESP fat32 1MiB 513MiB
 (parted) set 1 boot on
@@ -127,31 +127,30 @@ The same partiction setup could all be done using parted which is another viable
 (parted) name 3 lvm-partition
 (parted) print
 (parted) quit</pre
-
 ```
 ---
 
  Create the filesystems on the logical volumes
 
-```
-# mkswap -L swap /dev/mapper/vg\_root-lv\_swap
-# swapon /dev/mapper/vg\_root-lv\_swap
-# mkfs.ext4 /dev/mapper/vg\_root-lv\_root
+```bash
+mkswap -L swap /dev/mapper/vg\_root-lv\_swap
+swapon /dev/mapper/vg\_root-lv\_swap
+mkfs.ext4 /dev/mapper/vg\_root-lv\_root
 ```
 ---
 
 mount the partitions and logical volumes, creating a new filesystem structure ready for bootstrapping the OS install into it.
 
-```
-# mount /dev/mapper/vg\_root-lv\_root /mnt
-# mkdir /mnt/boot
-# mount /dev/nvme0n1p2 /mnt/boot
-# mkdir /mnt/boot/efi
-# mount /dev/nvme0n1p1 /mnt/boot/efi
+```bash
+mount /dev/mapper/vg\_root-lv\_root /mnt
+mkdir /mnt/boot
+mount /dev/nvme0n1p2 /mnt/boot
+mkdir /mnt/boot/efi
+mount /dev/nvme0n1p1 /mnt/boot/efi
 ```
 Edit your /etc/pacman.d/mirrors file and uncomment a server that is faster to you (hint: search for the name of the site that your downloaded the .iso file from, chances are that they have for a full repository as well)
 
-### Install the system files into your new filesystem tree
+## Install the system files into your new filesystem tree
 
 We are now set to start install the base Arch Linux system along with a few other tools needed to get a UEFI working so your BIOS has something to hand over the booting your system  too.
 
@@ -161,31 +160,31 @@ There, you now have the bare bones of Arch Linux installed onto your system.  N
 
 Preserve the new filesystem tree and make optimisations for NVMe devices by creating the fstab and modifying it.
 
-```
-# genfstab -pU /mnt >> /mnt/etc/fstab
+```bash
+genfstab -pU /mnt >> /mnt/etc/fstab
 ```
 open the new /mnt/etc/fstab file editing (nano is my goto for this).
 
-```
-# nano /mnt/etc/fstab
+```bash
+nano /mnt/etc/fstab
 ```
 and make the change relatime to noatime on all non boot partitions (in this case /) and add a /tmp ramdisk to speed up and reduse wear on the NVMe drive.
 
-```
+```bash
 tmpfs    /tmp     tmpfs   defaults,noatime,mode=1777       0 0
 ```
 make /mnt the new root file system and pivot to it.
 
-```
-root@archiso /etc # arch-root /mnt /bin/bash
-[root@archiso /]#
+```bash
+root@archiso /etc > arch-root /mnt /bin/bash
+[root@archiso /]
 ```
 From now on, all the changes we make to files will be on the Arch Linux system we will be booting into.
 
 We need to open up for editing /etc/mkinitcpio.conf to amend the HOOKS= and MODULES= section ensure the boot strapper (GRUB2) has a suitable initialisation ram disk image.
 
-```
-[root@archiso /]# nano /etc/mkinitcpio.conf
+```bash
+[root@archiso /]> nano /etc/mkinitcpio.conf
 ```
 Add ext4 to MODULES
 Add lvm2 to HOOKS before filesystems and after udev
@@ -193,12 +192,12 @@ Add resume after lvm2 (also has to be after 'udev')
 
 Generate the the new initrd image.
 
-```
-[root@archiso /]# mkinitcpio -p linux
+```bash
+[root@archiso /]> mkinitcpio -p linux
 ```
 Now install the uefi ready GRUB loader
 
-```
+```bash
 grub-install --target=x86\_64-efi --efi-directory=/boot/efi \
 --bootloader-id=arch\_grub --recheck --debug
 ```
@@ -206,26 +205,26 @@ Technically your system is ready to reboot, but wait there is more to be sure so
 
 Setup system timezone and clock. Look in /usr/share/zoneinfo to find your timezone and link the file into /etc/localtime then set the hardwareclock. There may already be a soft link /etc/localtime to /etc/share/zoneinfo/UTC, just delete it.
 
-```
-[root@archiso /]# rm /etc/localtime
-[root@archiso /]# ln -s /usr/share/zoneinfo/Australia/Perth /etc/localtime
-[root@archiso /]# hwclock --systohc --utc
+```bash
+[root@archiso /]> rm /etc/localtime
+[root@archiso /]> ln -s /usr/share/zoneinfo/Australia/Perth /etc/localtime
+[root@archiso /]> hwclock --systohc --utc
 
 ```
 Set the system hostname
 
-```
-[root@archiso /]# hostname ArchLinux
-[root@archiso /]# echo ArchLinux > /etc/hostname
+```bash
+[root@archiso /]> hostname ArchLinux
+[root@archiso /]> echo ArchLinux > /etc/hostname
 ```
 Generate a local. This defines which language the system uses, and other regional considerations such as currency denomination, numerology, and character sets etc. Values are listed in /etc/locale.gen. Edit local.gen and uncomment en\_AU.UTF-8 (as I'm in Australia), as well as other needed localisations. Save the file, and generate the new locales
 
-```
-[root@archiso /]# locale-gen
-[root@archiso /]# localectl set-locale LANG=en\_AU.UTF-8
-[root@archiso /]# echo LANG=en\_AU.UTF-8 >> /etc/locale.conf
-[root@archiso /]# echo LANGUAGE=en\_AU >> /etc/locale.conf
-[root@archiso /]# echo LC\_ALL= >> /etc/locale.conf
+```bash
+[root@archiso /]> locale-gen
+[root@archiso /]> localectl set-locale LANG=en\_AU.UTF-8
+[root@archiso /]> echo LANG=en\_AU.UTF-8 >> /etc/locale.conf
+[root@archiso /]> echo LANGUAGE=en\_AU >> /etc/locale.conf
+[root@archiso /]> echo LC\_ALL= >> /etc/locale.conf
 
 ```
 > NOTE: 
@@ -233,22 +232,21 @@ Generate a local. This defines which language the system uses, and other regiona
 
 Set password for root
 
-```
-[root@archiso /]# passwd
+```bash
+[root@archiso /]> passwd
 ```
 Create another user account for yourself and give it a password
 
-```
-[root@archiso /]# useradd -m -g users -G wheel -s /bin/bash 
-[root@archiso /]# passwd
+```bash
+[root@archiso /]> useradd -m -g users -G wheel -s /bin/bash 
+[root@archiso /]> passwd
 ```
 Modify the /etc/sudoers file so you can use your new user account to do administrative tasks using sudo and never have to login or use the root account again. First set the default editor for the root account as the visudo command is set to use vim, which is not installed. I will set nano.
 
-```
-[root@archiso /]# echo "export EDITOR=nano" >> ~/.bashrc
-[root@archiso /]# source ~/.bashrc
-[root@archiso /]# visudo
-
+```bash
+[root@archiso /]> echo "export EDITOR=nano" >> ~/.bashrc
+[root@archiso /]> source ~/.bashrc
+[root@archiso /]> visudo
 ```
 Uncomment the line
  ***# %wheel ALL=(ALL) ALL***
@@ -256,16 +254,16 @@ to read
 ***%wheel ALL=(ALL) ALL***
 
 
-### Lets Wrap it Up
+## Lets Wrap it Up
 
 There is a shed load of work to do still before this system could be considered anywhere near a usable server or workstation (still need video card drivers, services, Xorg or Wayland, a Desktop Environment etc etc) but we, at least have a minimal system that can boot up so we can begin the task of creating the system we desire.
 
 Hold up, remember that we are still in a chroot environment, let's deal with that then reboot.
 
-```
-[root@archiso /]# exit
-root@archiso# umount -R /mnt
-root@archiso# reboot
+```bash
+[root@archiso /]> exit
+root@archiso> umount -R /mnt
+root@archiso> reboot
 
 ```
 !PHEW

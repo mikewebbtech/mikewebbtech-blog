@@ -29,7 +29,7 @@ During the installation, make sure you have a network connection configured (man
 At the installation stage where GRUB fails to install, open a shell and run the following commands:
 
 
-```
+```bash
 mount --bind /dev /target/dev
 mount --bind /dev/pts /target/dev/pts
 mount --bind /proc /target/proc
@@ -39,7 +39,7 @@ chroot /target /bin/bash
 ```
 
 
-```
+```bash
 apt-get update
 apt-get install grub-efi-amd64
 update-grub
@@ -52,11 +52,11 @@ Once the installation completes, boot into the system. Add "nvme" to /etc/initra
 
 Edit /etc/default/grub and add this line
 
-```
+```bash
 GRUB\_CMDLINE\_LINUX="intel\_pstate=no\_hwp"
 ```
 and add "nomodeset" to the GRUB\_CMDLINE\_LINUX\_DEFAULT so it looks like this:
-```
+```bash
 GRUB\_CMDLINE\_LINUX\_DEFAULT="quiet nomodeset"
 ```
 Run update-grub.

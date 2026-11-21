@@ -50,4 +50,4 @@ $sudo apt-get update
 mike@obsidian:~/$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9A2FD067A2E3EF7B
 ```
 
-P.S.  We all should be using some sort of PKI for the transmission of data over the internet
+> ![IMPORTANT] P.S.  We all should be using some sort of PKI for the transmission of data over the internet
